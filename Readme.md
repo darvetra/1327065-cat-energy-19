@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Григорий Сапожников](https://up.htmlacademy.ru/adaptive/19/user/1327065).
-* Наставник: `Неизвестно`.
+* Наставник: [Никита Рогатнев](https://up.htmlacademy.ru/adaptive/19/user/86119).
 
 ---
 
