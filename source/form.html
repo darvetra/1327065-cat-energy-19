@@ -65,9 +65,7 @@
         <label class="form__label">Телефон:* <input type="text"></label>
 
         <h2 class="form__title">Комментарий</h2>
-        <textarea name="" id="" cols="30" rows="10">
-          Расскажите обо всех повадках кота
-        </textarea>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
 
         <h2 class="form__title">Дополнительно</h2>
         <ul class="optionally">
@@ -97,18 +95,17 @@
           </li>
         </ul>
 
-        <button href="#" class="button form__button">Отправить заявку</button>
+        <button type="submit" class="button form__button">Отправить заявку</button>
         <span class="form__footnote">* — Обязательные поля</span>
 
-
-        <fieldset>
-          <legend>Снижение веса</legend>
-          <p>5 кг</p>
-        </fieldset>
-        <fieldset>
-          <legend>Затрачено времени</legend>
-          <p>60 дней</p>
-        </fieldset>
+        <dl>
+          <dt>Снижение веса</dt>
+          <dd>5 кг</dd>
+        </dl>
+        <dl>
+          <dt>Затрачено времени</dt>
+          <dd>60 дней</dd>
+        </dl>
         <span>Затраты на питание: 15 000 руб.</span>
         <img src="https://via.placeholder.com/150x150" alt="" class="example__image--fat" width="311" height="232">
         <div class="example__inputs">
@@ -129,13 +126,13 @@
     </main>
 
     <footer class="footer">
-      <div class="footer_contacts">
-        <div class="footer__dealers">
+      <div class="footer__contacts">
+        <h3 class="footer__dealers">
           приглашаем
           к сотрудничеству
           дилеров!
-        </div>
-        <div class="footer__address">
+        </h3>
+        <div class="address">
           ул. Большая Конюшенная, д. 19/8
           Санкт-Петербург
         </div>
