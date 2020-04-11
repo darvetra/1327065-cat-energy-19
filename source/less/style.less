@@ -1,0 +1,117 @@
+// colors
+@leaf: #68b738;
+@white-three: #f2f2f2;
+@white-four: #ffffff;
+@black-two: #111111;
+@black-three: #222222;
+@greyish-brown: #444444;
+
+// typography
+@font-face {
+  font-family: Oswald-Regular;
+  src: url("../fonts/oswaldregular.woff") format("woff"),
+    url("../fonts/oswaldregular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Oswald-Medium;
+  src: url("../fonts/oswaldmedium.woff") format("woff"),
+    url("../fonts/oswaldmedium.woff2") format("woff2");
+}
+
+.font-title() {
+  font-family: Oswald-Regular, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.font-description-oswald() {
+  font-family: Oswald-Regular, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.font-medium() {
+  font-family: Oswald-Medium, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.font-description-arial() {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+//basic
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: @white-four;
+
+  font-family: Oswald-Regular, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: @greyish-brown;
+  line-height: 1;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+  letter-spacing: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+// universal
+@import "visually-hidden.less";
+@import "button.less";
+// @import "header.less";
+@import "main-nav.less";
+@import "page.less";
+@import "footer.less";
+
+// index
+@import "benefit.less";
+@import "features.less";
+@import "advantages.less";
+@import "example.less";
+
+// catalog
+@import "product.less";
+@import "more-products.less";
+@import "product-optional.less";
+@import "gift.less";
+
+// form
+@import "form.less";
