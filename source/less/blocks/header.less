@@ -1,0 +1,69 @@
+.header {
+  // min-height: 260px;
+  min-width: 280px;
+  padding: 0;
+  // padding: 11px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header__logo {
+  height: 39px;
+  margin-left: 20px;
+  margin-top: 11px;
+}
+
+.header__toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  padding-top: 12px;
+  padding-bottom: 8px;
+  margin-right: 20px;
+  margin-top: 11px;
+}
+
+.header__menu {
+  flex-grow: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .header {
+    // min-height: 85px;
+  }
+
+  .header__logo {
+    // height: 59px; не работает. пока что. да и картинку менять надо
+    margin-left: 30px;
+    margin-top: 24px;
+  }
+
+  .header__toggle {
+    display: none;
+  }
+
+  .header__menu {
+    margin-right: 30px;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    min-height: 84px;
+    // position: absolute;
+    margin: 0 auto;
+    max-width: 1220px;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+  }
+
+  .header__logo {
+    height: 60px;
+  }
+
+}

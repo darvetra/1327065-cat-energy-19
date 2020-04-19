@@ -1,8 +1,14 @@
 .product-optional {
-  list-style-type: none;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
-.product-optional__title {
+.product-optional__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.product-optional__subtitle {
   .font-description-oswald;
   font-size: 16px;
   text-align: left;
@@ -13,4 +19,28 @@
   .font-description-arial;
   text-align: left;
   color: @greyish-brown;
+}
+
+@media (min-width: @tablet-width) {
+  .product-optional {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-optional {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .product-optional__title {
+    width: 1220px;
+  }
+
+  .product-optional__list {
+    width: 895px;
+  }
 }

@@ -1,7 +1,19 @@
+.page {
+  margin: 0 20px;
+}
+
 .page__title {
   .font-title;
   line-height: 1.67;
   color: @black-two;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.page__list {
+  padding: 0;
+  margin: 0 20px;
 }
 
 .page__subtitle {
@@ -10,4 +22,29 @@
   line-height: 1;
   color: @black-two;
   text-align: left;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .page__title {
+  margin-right: 30px;
+  margin-left: 30px;
+  }
+
+  .page__list {
+    margin: 0 30px;
+  }
+
+  .page__subtitle {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page {
+    width: @desktop-width;
+    margin: 0 auto;
+  }
 }

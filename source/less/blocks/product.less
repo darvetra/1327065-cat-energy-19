@@ -1,5 +1,6 @@
 .product {
-  list-style-type: none
+  list-style-type: none;
+  padding: 0;
 }
 
 .product__title {
@@ -15,4 +16,25 @@
   font-size: 12px;
   line-height: 1.33;
   color: @greyish-brown;
+}
+
+@media (min-width: @tablet-width) {
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .product__item {
+    width: 324px;
+    background-color: @white-three;
+  }
+
+}
+
+@media (min-width: @tablet-width) {
+  .product__item {
+    width: 245px;
+  }
+
 }

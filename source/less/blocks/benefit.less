@@ -3,14 +3,95 @@
   background-image: url(../img/index-background-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
+
+  min-width: 280px;
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 480px; // временно, для понимания вида
 }
 
 .benefit__title {
   .font-title;
-  color: @white-four;
+  color: @white-two;
 }
 
 .benefit__subtitle {
   .font-description-oswald;
-  color: @white-four;
+  color: @white-two;
+}
+
+.benefit__image {
+  margin: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .benefit {
+    background-color: @white-two;
+    background-image: url(../img/index-can-mobile@1x.png);
+    background-position: bottom;
+    display: flex;
+    min-height: 700px;
+    padding: 0 30px;
+  }
+
+  .benefit__title {
+    .font-title;
+    font-size: 60px;
+    color: @black-two;
+    text-align: left;
+    max-width: 550px;
+    margin-left: 90px;
+
+  }
+
+  .benefit__subtitle {
+    .font-description-oswald;
+    color: @black-two;
+    text-align: left;
+    margin-left: 90px;
+  }
+
+  .benefit__image {
+    width: 709px;
+  }
+
+  .benefit__link {
+    width: 245px;
+    height: 52px;
+    margin-left: 90px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .benefit {
+    background-color: @white-two;
+    // background-image: url(../img/index-background-desktop@1x.jpg);
+    background-image: linear-gradient(to right, @white-two 50%, @leaf 50%);
+
+    margin-top: -84px;
+    padding-top: 84px;
+    z-index: 5;
+    position: relative;
+  }
+
+  .benefit__title {
+
+    text-align: left;
+  }
+
+  .benefit__subtitle {
+
+    text-align: left;
+  }
+
+  .benefit__image {
+    width: 552px;
+  }
+
+  .benefit__link {
+    order: 1;
+  }
 }
