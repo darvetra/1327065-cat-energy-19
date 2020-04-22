@@ -1,8 +1,23 @@
+.page {
+  margin: 0;
+  padding: 0;
+
+    // margin: 0 20px;
+}
+
 .page__title {
   .font-title;
   line-height: 1.67;
   color: @black-two;
+  margin-right: @mobile-indent;
+  margin-left: @mobile-indent;
+  text-align: left;
 }
+
+// .page__list {
+//   padding: 0;
+//   margin: 0 20px;
+// }
 
 .page__subtitle {
   .font-title;
@@ -10,4 +25,29 @@
   line-height: 1;
   color: @black-two;
   text-align: left;
+  margin-right: @mobile-indent;
+  margin-left: @mobile-indent;
+}
+
+@media (min-width: @tablet-width) {
+  .page__title {
+  margin-right: @tablet-indent;
+  margin-left: @tablet-indent;
+  }
+
+  // .page__list {
+  //   margin: 0 30px;
+  // }
+
+  .page__subtitle {
+    margin-right: @tablet-indent;
+    margin-left: @tablet-indent;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page {
+    // width: @desktop-width;
+    // margin: 0 auto;
+  }
 }

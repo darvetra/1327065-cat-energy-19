@@ -1,21 +1,69 @@
 .footer {
   background-color: @white-three;
+  display: flex;
+  flex-direction: column;
 }
 
-.footer__contacts {
-  background-color: @white-four;
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.footer__dealers {
-  .font-description-oswald;
-  font-size: 16px;
-  line-height: 1.25;
-  color: @black-two;
-  text-align: left;
+.footer__logo {
+  padding: 0 @mobile-indent;
+  margin: auto;
+  margin-top: 39px;
+  margin-bottom: 31px;
 }
 
-.footer__address {
-  .font-description-arial;
-  line-height: 1.43;
-  color: @greyish-brown;
+.footer__social {
+  border-top: 1px solid @grey;
+  border-bottom: 1px solid @grey;
+  margin: 0 @mobile-indent;
+}
+
+.footer__copyright {
+  margin: 22px @mobile-indent;
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+  }
+
+  .footer__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer__logo {
+    margin: 0;
+    padding: 0 @tablet-indent;
+    // margin-left: 30px;
+    margin-top: 64px;
+  }
+
+  .footer__social {
+    border: none;
+    height: 150px;
+  }
+
+  .footer__copyright {
+    margin: 0 @tablet-indent;
+    margin-top: 58px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer__wrapper {
+    // max-width: @content-width;
+    // padding: 0;
+    max-width: @content-width;
+    padding: 0;
+  }
 }

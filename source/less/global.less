@@ -13,7 +13,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: @white-four;
+  min-width: 320px;
+  background-color: @white-two;
 
   font-family: Oswald-Regular, Arial, sans-serif;
   font-size: 14px;
@@ -33,4 +34,11 @@ img {
 
 a {
   text-decoration: none;
+}
+
+@media (min-width: @desktop-width) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
 }
