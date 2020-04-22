@@ -1,7 +1,23 @@
 .gift {
-  width: 280px;
-  height: 289px;
+  display: flex;
+  // width: 280px;
+  // height: 289px;
+  // margin: 0 auto;
+  // background-color: @leaf;
+  // background-image: url(../img/gift-photo-mobile@1x.jpg);
+  // background-repeat: no-repeat;
+  // background-position: center;
+}
+
+.gift__wrapper {
+  display: flex;
   margin: 0 auto;
+  width: 100%;
+  padding: 0 @mobile-indent;
+
+  // width: 280px;
+  min-height: 289px;
+  // margin: 0 auto;
   background-color: @leaf;
   background-image: url(../img/gift-photo-mobile@1x.jpg);
   background-repeat: no-repeat;
@@ -17,4 +33,14 @@
   width: 159px;
   display: block;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+
+}
+
+@media (min-width: @desktop-width) {
+  .gift__wrapper {
+    width: auto;
+  }
 }

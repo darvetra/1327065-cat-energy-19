@@ -4,10 +4,18 @@
   flex-direction: column;
 }
 
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .footer__contacts {
   background-color: @white-two;
   display: flex;
-  padding: 0 20px;
+  // padding: 0 20px;
+  padding: 0 @mobile-indent;
   justify-content: space-between;
 }
 
@@ -31,7 +39,7 @@
 }
 
 .footer__logo {
-  padding: 0 20px;
+  padding: 0 @mobile-indent;
   margin: auto;
   margin-top: 39px;
   margin-bottom: 31px;
@@ -40,33 +48,41 @@
 .footer__social {
   border-top: 1px solid @grey;
   border-bottom: 1px solid @grey;
-  margin: 0 20px;
+  margin: 0 @mobile-indent;
 }
 
 .footer__copyright {
-  margin: 22px 20px;
+  margin: 22px @mobile-indent;
 }
 
 @media (min-width: @tablet-width) {
   .footer {
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+  }
+
+  .footer__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .footer__contacts {
-    padding: 0 30px;
-    min-width: @tablet-width;
+    padding: 0 @tablet-indent;
+    // min-width: @tablet-width;
+    width: 100%;
   }
 
   .footer__map {
-
-    min-width: @tablet-width;
+    width: 100%;
+    // min-width: @tablet-width;
   }
 
   .footer__logo {
     margin: 0;
-    margin-left: 30px;
+    padding: 0 @tablet-indent;
+    // margin-left: 30px;
     margin-top: 64px;
   }
 
@@ -76,14 +92,21 @@
   }
 
   .footer__copyright {
-    margin: 0 30px;
+    margin: 0 @tablet-indent;
     margin-top: 58px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .footer__wrapper {
+    // max-width: @content-width;
+    // padding: 0;
+    max-width: @content-width;
+    padding: 0;
+  }
+
   .footer__contacts {
-    min-width: 570px;
+    width: 570px;
     height: 201px;
     position: relative;
     margin-bottom: -201px;
@@ -93,7 +116,7 @@
   }
 
   .footer__dealers {
-    width: 160px
+    width: 160px;
   }
 
   .footer__address {
@@ -103,9 +126,10 @@
   .footer__map {
     height: 400px;
     min-width: @desktop-width;
+    // width: 100%;
     position: relative;
+    // left: 0;
     margin-top: -95px;
     z-index: 1;
   }
-
 }
