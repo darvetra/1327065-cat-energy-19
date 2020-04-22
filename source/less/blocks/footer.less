@@ -11,33 +11,6 @@
   width: 100%;
 }
 
-.footer__contacts {
-  background-color: @white-two;
-  display: flex;
-  // padding: 0 20px;
-  padding: 0 @mobile-indent;
-  justify-content: space-between;
-}
-
-.footer__dealers {
-  .font-description-oswald;
-  font-size: 16px;
-  line-height: 1.25;
-  color: @black-two;
-  text-align: left;
-}
-
-.footer__address {
-  .font-description-arial;
-  line-height: 1.43;
-  color: @greyish-brown;
-}
-
-.footer__map {
-  height: 370px;
-  background-color: @leaf; // тут будет карта, фон удалишь
-}
-
 .footer__logo {
   padding: 0 @mobile-indent;
   margin: auto;
@@ -68,17 +41,6 @@
     justify-content: space-between;
   }
 
-  .footer__contacts {
-    padding: 0 @tablet-indent;
-    // min-width: @tablet-width;
-    width: 100%;
-  }
-
-  .footer__map {
-    width: 100%;
-    // min-width: @tablet-width;
-  }
-
   .footer__logo {
     margin: 0;
     padding: 0 @tablet-indent;
@@ -103,33 +65,5 @@
     // padding: 0;
     max-width: @content-width;
     padding: 0;
-  }
-
-  .footer__contacts {
-    width: 570px;
-    height: 201px;
-    position: relative;
-    margin-bottom: -201px;
-    z-index: 10;
-    padding: 0;
-    margin-left: 110px;
-  }
-
-  .footer__dealers {
-    width: 160px;
-  }
-
-  .footer__address {
-    width: 160px;
-  }
-
-  .footer__map {
-    height: 400px;
-    min-width: @desktop-width;
-    // width: 100%;
-    position: relative;
-    // left: 0;
-    margin-top: -95px;
-    z-index: 1;
   }
 }
