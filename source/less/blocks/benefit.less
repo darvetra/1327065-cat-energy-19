@@ -1,11 +1,13 @@
 .benefit {
-  background-color: @leaf;
+  // background-color: @leaf;
   background-image: url(../img/index-background-mobile@1x.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
+  background-size: 100% auto;
+  // background-size: contain;
 
   display: flex;
-  height: 480px; // временно, для понимания вида
+  min-height: 480px; // временно, для понимания вида
 }
 
 .benefit__wrapper {
@@ -18,15 +20,23 @@
 .benefit__title {
   .font-title;
   color: @white-two;
+  margin-bottom: 19px;
 }
 
 .benefit__subtitle {
   .font-description-oswald;
   color: @white-two;
+  margin-bottom: 29px;
 }
 
 .benefit__image {
   margin: auto;
+}
+
+.benefit__link {
+  height: 40px;
+  margin: 0 @mobile-indent;
+  margin-top: 302px; // ------------------------------------- временно пока нет картинки
 }
 
 @media (min-width: @tablet-width) {
