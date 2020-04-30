@@ -17,34 +17,81 @@
   color: @black-two;
   line-height: 1.67;
   text-align: left;
+  margin: 33px 0;
 }
 
 .example__description {
   .font-description-arial;
   line-height: 1.29;
+  margin-top: 0;
+  margin-bottom: 27px;
 }
 
 .example__deflist {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 70px;
+  height: 86px;
 }
 
 .example__term {
   .font-description-oswald;
   font-size: 24px;
   color: @black-two;
-  height: 40px;
-  min-width: 120px;
+  min-height: 56px;
+
+  border: 1px solid @greyish-brown;
+  min-width: 124px;
+  padding-top: 17px;
+
+  &:first-of-type {
+    margin-right: 32px;
+  }
+
 }
 
 .example__definition {
   .font-description-arial;
   font-size: 12px;
   color: @greyish-brown;
-  margin: 0;
+  // margin: 0;
   height: 30px;
+
+  position: relative;
+  background-color: @white-three;
+  text-align: center;
+
+  max-width: 70px;
+  margin: 0 auto;
+  margin-top: -10px;
+  padding: 5px;
+
+  // flex-grow: 1;
+
+  &:first-of-type {
+    // margin-right: 32px;
+  }
+}
+
+.example__form {
+  background-image: url(../img/before-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% auto;
+  min-height: 232px;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.example__inputs {
+  margin: 0 auto;
+  margin-top: 232px;
+}
+
+.example__controls {
+  margin: 0 auto;
 }
 
 .example__secondary-description {
@@ -106,6 +153,7 @@
     background-color: @white-two;
     flex-grow: 1;
     width: 100%;
+
   }
 
   .example__essence {
