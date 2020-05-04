@@ -1,13 +1,19 @@
 .benefit {
-  // background-color: @leaf;
-  background-image: url(../img/index-background-mobile@1x.jpg);
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 100% auto;
-  // background-size: contain;
-
   display: flex;
   min-height: 480px; // временно, для понимания вида
+
+  // background-color: @leaf;
+  background-image: url("../img/index-can-mobile@1x.png"),
+    url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 180px, top;
+  background-size: 100% auto, 100% auto;
+  // background-size: contain;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-can-mobile@2x.png"),
+      url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .benefit__wrapper {
@@ -58,7 +64,6 @@
     text-align: left;
     max-width: 550px;
     margin-left: 90px;
-
   }
 
   .benefit__subtitle {
