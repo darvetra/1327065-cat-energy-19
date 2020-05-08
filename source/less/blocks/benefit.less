@@ -1,13 +1,21 @@
 .benefit {
+  display: flex;
+  // временно, для понимания вида
+  // min-height: 480px;
+
   // background-color: @leaf;
-  background-image: url(../img/index-background-mobile@1x.jpg);
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 100% auto;
+  background-image: url("../img/index-can-mobile@1x.png"),
+    url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  // background-position: center 180px, top;
+  background-position: center 80%, top;
+  background-size: 88% auto, 100% auto;
   // background-size: contain;
 
-  display: flex;
-  min-height: 480px; // временно, для понимания вида
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-can-mobile@2x.png"),
+      url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .benefit__wrapper {
@@ -20,7 +28,9 @@
 .benefit__title {
   .font-title;
   color: @white-two;
-  margin-bottom: 19px;
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 14px;
 }
 
 .benefit__subtitle {
@@ -36,7 +46,7 @@
 .benefit__link {
   height: 40px;
   margin: 0 @mobile-indent;
-  margin-top: 302px; // ------------------------------------- временно пока нет картинки
+  margin-top: 85%;
 }
 
 @media (min-width: @tablet-width) {
@@ -58,7 +68,6 @@
     text-align: left;
     max-width: 550px;
     margin-left: 90px;
-
   }
 
   .benefit__subtitle {

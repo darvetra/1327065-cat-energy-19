@@ -12,26 +12,37 @@
   padding: 0 @mobile-indent;
 }
 
+.example__essence {
+  padding-top: 8px;
+}
+
 .example__title {
   .font-title;
   color: @black-two;
   line-height: 1.67;
   text-align: left;
-  margin: 33px 0;
+  margin: 16px 0;
+
+
 }
 
 .example__description {
   .font-description-arial;
+  font-size: 14px;
   line-height: 1.29;
+  padding-right: 2px; // для perfect pixel
   margin-top: 0;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 }
 
 .example__deflist {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   flex-wrap: wrap;
-  height: 86px;
+  // height: 86px;
+  position: relative;
 }
 
 .example__term {
@@ -42,7 +53,8 @@
 
   border: 1px solid @greyish-brown;
   min-width: 124px;
-  padding-top: 17px;
+  flex-grow: 1;
+  padding-top: 12px;
 
   &:first-of-type {
     margin-right: 32px;
@@ -57,15 +69,19 @@
   // margin: 0;
   height: 30px;
 
-  position: relative;
+  // position: relative;
+  position: absolute;
+
   background-color: @white-three;
   text-align: center;
 
-  max-width: 70px;
-  margin: 0 auto;
-  margin-top: -10px;
+  // max-width: 70px;
+  max-width: 25%;
+  // margin: 0 auto;
+  // margin-top: -10px;
   padding: 5px;
-
+  margin: 0;
+margin-bottom: -15px;
   // flex-grow: 1;
 
   &:first-of-type {
@@ -73,16 +89,31 @@
   }
 }
 
+.example__definition--weight {
+  bottom: 0;
+  left: 10%;
+}
+
+.example__definition--time {
+  bottom: 0;
+  right: 10%;
+}
+
 .example__form {
-  background-image: url(../img/before-mobile@1x.png);
+  background-image: url("../img/before-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100% auto;
-  min-height: 232px;
+  // min-height: 232px;
+  // min-height: 80%;
+
 
   display: flex;
   flex-direction: column;
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/before-mobile@2x.png");
+  }
 }
 
 .example__inputs {
@@ -100,6 +131,7 @@
   color: @black-two;
   text-align: center;
   display: block;
+  margin-top: 35px;
 }
 
 .example__description-controls {

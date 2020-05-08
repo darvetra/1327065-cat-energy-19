@@ -1,15 +1,14 @@
 .page {
   margin: 0;
   padding: 0;
-
 }
 
 .page__title {
   .font-title;
   line-height: 1.67;
   color: @black-two;
-  margin-top: 31px;
-  margin-bottom: 35px;
+  margin-top: 15px;
+  margin-bottom: 28px;
   margin-right: @mobile-indent;
   margin-left: @mobile-indent;
   text-align: left;
@@ -21,14 +20,38 @@
   line-height: 1;
   color: @black-two;
   text-align: left;
+
+  // для заголовка дополнительные товары в мобильной версии, не нужны, проверь остальные, переопределил другим стилем эти отступы
   margin-right: @mobile-indent;
   margin-left: @mobile-indent;
+
+  position: relative;
+
+  &--line {
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 14px;
+      right: -@mobile-indent;
+      width: 18.5%;
+      height: 3px;
+      background-color: @leaf;
+    }
+  }
+}
+
+.page__gift {
+  margin-bottom: 35px;
 }
 
 @media (min-width: @tablet-width) {
   .page__title {
-  margin-right: @tablet-indent;
-  margin-left: @tablet-indent;
+    // для страницы каталога, проверь остальные
+    // margin-right: @tablet-indent;
+    // margin-left: @tablet-indent;
+    margin: 45px 0;
+    font-size: 60px;
   }
 
   .page__subtitle {
