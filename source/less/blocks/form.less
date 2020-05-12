@@ -4,10 +4,10 @@
 
 .form__wrapper {
   display: flex;
-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0 auto;
   width: 100%;
-  padding: 0 @mobile-indent;
+  // padding: 0 @mobile-indent;
 }
 
 .form__form {
@@ -21,11 +21,16 @@ flex-wrap: wrap;
   line-height: 1.29;
   color: @black-two;
   text-align: left;
+  margin: 0;
+  padding: 0 @mobile-indent;
 }
 
 .form__list-cat-propeties {
   list-style-type: none;
-  padding: 0;
+  // padding: 0;
+  margin-top: 36px;
+  padding: 0 @mobile-indent;
+  margin-bottom: 10px;
 }
 
 .form__list-target {
@@ -40,9 +45,20 @@ flex-wrap: wrap;
 
 .form__label {
   .font-description-oswald;
-  line-height: 1.13;
   color: @black-three;
+  font-size: 16px;
+  line-height: 1.13;
   text-align: left;
+
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+
+  position: relative; // для позиционирования иконок
+}
+
+.form__notion {
+  padding-top: 14px;
 }
 
 .form__input-text {
@@ -51,6 +67,56 @@ flex-wrap: wrap;
   text-align: left;
   line-height: 1.13;
   color: @greyish-brown;
+
+  // width: 100%;
+  flex-grow: 1;
+  margin-left: 13px;
+  margin-bottom: 14px;
+  padding-left: 14px;
+
+  height: 45px;
+}
+
+.form__list-target {
+  border-top: 1px solid @greyish;
+  border-bottom: 1px solid @greyish;
+  margin: 0;
+  padding: 0 @mobile-indent;
+  padding-top: 20px;
+}
+
+.form__subtitle {
+  margin-top: 31px;
+}
+
+// контакты владельца
+.form__contact-list {
+  padding: 0 @mobile-indent;
+  margin-bottom: 0;
+}
+
+.form__input-icon {
+  z-index: 10;
+  position: absolute;
+
+  &--mail {
+    top: 13px;
+    right: 16px;
+  }
+
+  &--phone {
+    top: 13px;
+    right: 13px;
+  }
+}
+
+.form__input-icon + .form__input-text {
+  padding-right: 34px;
+}
+
+//комментарий
+.form__subtitle--comment {
+  margin-top: 14px;
 }
 
 .form__textarea {
@@ -59,11 +125,33 @@ flex-wrap: wrap;
   text-align: left;
   line-height: 1.13;
   color: @greyish-brown;
+  margin: 0 @mobile-indent;
+  margin-top: 15px;
+
+  padding: 12px 13px;
+  height: 150px;
+}
+
+//раздел дополнительно
+.form__subtitle--add {
+  margin-top: 27px;
 }
 
 .form__optionally {
   list-style-type: none;
-  padding: 0;
+  padding: 0 @mobile-indent;
+  margin-bottom: 18px;
+}
+
+.form__button {
+  margin: 0 @mobile-indent;
+  padding-top: 6px;
+  font-size: 16px;
+}
+
+.form__footnote {
+  margin: 23px auto;
+  margin-bottom: 32px;
 }
 
 @media (min-width: @tablet-width) {

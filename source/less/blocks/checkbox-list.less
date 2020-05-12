@@ -1,0 +1,69 @@
+.checkbox-list {
+}
+
+
+.checkbox-list__list-item {
+  margin-top: 6px;
+  margin-bottom: 24px;
+}
+
+.checkbox-list__label {
+  position: relative;
+
+  cursor: pointer; // ------------------------------------- потом проверь все интерактивные элементы на предмет курсора
+}
+
+.checkbox-list__checkbox {
+  /* скрываем чекбоксы правильно */
+  position: absolute;
+
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  appearance: none;
+
+  /* скрываем чекбоксы в IE 11 */
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.checkbox-list__pseudo-checkbox {
+  border: solid 1px @greyish;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  top: -7px;
+  left: 0;
+}
+
+.checkbox-list__pseudo-label {
+  .font-description-oswald;
+  color: @black-three;
+  font-size: 16px;
+  line-height: 1.13;
+
+  padding-left: 46px;
+}
+
+/* Стилизуем чекбоксы в состоянии фокуса, во имя доступности, так как шаблоном подобное состояние не предусмотрено */
+.checkbox-list__checkbox:focus + .checkbox-list__pseudo-checkbox {
+  outline: -webkit-focus-ring-color auto 1px;
+  outline: @focus-color auto 1px;
+  outline-color: -webkit-focus-ring-color;
+  outline-color: @focus-color;
+  outline-style: auto;
+  outline-width: 1px;
+}
+
+.checkbox-list__checkbox:checked + .checkbox-list__pseudo-checkbox::before {
+  width: 22px;
+  height: 17px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 17'%3E%3Cpath fill='%2368b738' d='M20.1 0L7.7 13.3 1 6.1 0 7.2l7.6 8.2.1.1L21 1.2l.1-.1z'/%3E%3C/svg%3E");
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  display: block;
+  content: "";
+}
