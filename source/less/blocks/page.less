@@ -27,16 +27,21 @@
 
   position: relative;
 
+  display: flex;
+  flex-direction: row;
+
   &--line {
     &::after {
       content: "";
-      position: absolute;
-      display: block;
+      position: relative;
+      // display: block;
       top: 14px;
       right: -@mobile-indent;
-      width: 18.5%;
+      min-width: 99px;
       height: 3px;
       background-color: @leaf;
+
+      flex-grow: 1;
     }
   }
 }
