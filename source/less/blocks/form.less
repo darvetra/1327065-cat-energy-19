@@ -25,22 +25,13 @@
   padding: 0 @mobile-indent;
 }
 
+// параметры кота
 .form__list-cat-propeties {
   list-style-type: none;
   // padding: 0;
   margin-top: 36px;
   padding: 0 @mobile-indent;
   margin-bottom: 10px;
-}
-
-.form__list-target {
-  list-style-type: none;
-  padding: 0;
-}
-
-.form__contact-list {
-  list-style-type: none;
-  padding: 0;
 }
 
 .form__label {
@@ -77,20 +68,33 @@
   height: 45px;
 }
 
+//заголовок
+.form__subtitle {
+  margin-top: 31px;
+
+  &--comment {
+    margin-top: 14px;
+  }
+
+  &--add {
+    margin-top: 27px;
+  }
+}
+
+// радио список
+
 .form__list-target {
-  border-top: 1px solid @greyish;
-  border-bottom: 1px solid @greyish;
+  list-style-type: none;
+  border-top: 1px solid @very-light-pink-three;
+  border-bottom: 1px solid @very-light-pink-three;
   margin: 0;
   padding: 0 @mobile-indent;
   padding-top: 20px;
 }
 
-.form__subtitle {
-  margin-top: 31px;
-}
-
 // контакты владельца
 .form__contact-list {
+  list-style-type: none;
   padding: 0 @mobile-indent;
   margin-bottom: 0;
 }
@@ -115,9 +119,6 @@
 }
 
 //комментарий
-.form__subtitle--comment {
-  margin-top: 14px;
-}
 
 .form__textarea {
   .font-description-oswald;
@@ -133,14 +134,17 @@
 }
 
 //раздел дополнительно
-.form__subtitle--add {
-  margin-top: 27px;
-}
 
 .form__optionally {
   list-style-type: none;
   padding: 0 @mobile-indent;
   margin-bottom: 18px;
+}
+
+//контролы
+.form__controls {
+  display: flex;
+  flex-direction: column;
 }
 
 .form__button {
@@ -156,7 +160,107 @@
 
 @media (min-width: @tablet-width) {
   .form__wrapper {
-    padding: 0 @tablet-indent;
+    // padding: 0 @tablet-indent;
+  }
+
+  .form__description {
+    font-size: 20px;
+    line-height: 1.5;
+    padding-left: @tablet-indent-form;
+  }
+
+  .form__label {
+    font-size: 20px;
+  }
+
+  // параметры кота
+  .form__list-cat-propeties {
+    padding: 0 @tablet-indent-form;
+    margin-top: 66px;
+  }
+
+  .form__input-text {
+    margin-left: 17px;
+    margin-bottom: 20px;
+    padding-left: 17px;
+    height: 52px;
+    font-size: 20px;
+  }
+
+  // радио
+  .form__list-target {
+    margin: 0 @tablet-indent-form;
+    margin-top: 42px;
+    margin-bottom: 78px;
+    border: 1px solid @very-light-pink-three;
+  }
+
+  //заголовки
+  .form__subtitle {
+    // margin: 0 @tablet-indent-form;
+    margin-top: 0;
+    margin-right: 30px;
+
+    &--line {
+      &::after {
+        // content: "";
+        // position: relative;
+
+        // top: 22px;
+        // right: -@tablet-indent-form;
+        // right: -@tablet-indent;
+        // min-width: 99px;
+        // height: 3px;
+        // background-color: @leaf;
+
+        // flex-grow: 1;
+      }
+    }
+  }
+
+  //контакт
+  .form__contact-list {
+    margin-top: 46px;
+    margin-bottom: 45px;
+    padding: 0 @tablet-indent-form;
+  }
+
+  .form__textarea {
+    margin: 0 @tablet-indent-form;
+    margin-top: 45px;
+    margin-bottom: 65px;
+    height: 176px;
+    font-size: 20px;
+    padding: 15px;
+    padding-left: 17px;
+  }
+
+  .form__optionally {
+    padding: 0 @tablet-indent-form;
+  }
+
+  //контролы
+  .form__controls {
+    // padding: 0 @tablet-indent-form;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-bottom: 72px;
+  }
+
+  .form__button {
+    margin: 0 @tablet-indent-form;
+    margin-right: 60px;
+    font-size: 20px;
+
+    min-width: 283px;
+    height: 52px;
+  }
+
+  .form__footnote {
+    text-align: left;
+    margin: 0;
+    font-size: 16px;
+    padding-top: 17px;
   }
 }
 
@@ -170,20 +274,30 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     margin-bottom: 200px; // Временно
   }
 
   .form__description {
     width: @content-width;
+    padding: 0;
+    margin-top: 34px;
   }
 
   .form__list-cat-propeties {
     width: @content-width / 2;
+    padding: 0;
+    padding-right: 40px;
   }
 
   .form__list-target {
-    width: @content-width / 2;
+    width: @content-width / 2 - 40px;
+    margin: 0;
+    height: 197px;
+    margin-top: 66px;
+    margin-left: 40px;
+    margin-bottom: 68px;
   }
 
   .form__subtitle {

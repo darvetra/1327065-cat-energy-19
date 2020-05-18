@@ -28,7 +28,7 @@
 
 .radio-list__pseudo-radio {
   border-radius: 50%;
-  border: solid 1px @greyish;
+  border: solid 1px @very-light-pink-three;
   width: 30px;
   height: 30px;
   display: block;
@@ -66,4 +66,35 @@
   left: 8px;
   display: block;
   content: "";
+}
+
+@media (min-width: @tablet-width) {
+  .radio-list__list-item {
+    margin-top: 12px;
+    margin-bottom: 31px;
+  }
+
+  .radio-list__pseudo-radio {
+    width: 40px;
+    height: 40px;
+
+    top: -15px;
+    left: 8px;
+  }
+
+  .radio-list__pseudo-label {
+    font-size: 20px;
+    padding-left: 67px;
+  }
+
+  .radio-list__radio-button:checked + .radio-list__pseudo-radio::before {
+    width: 18px;
+    height: 18px;
+
+    top: 10px;
+    left: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
 }
