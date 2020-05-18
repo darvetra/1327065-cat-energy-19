@@ -44,7 +44,7 @@
     <main class="page">
       <section class="product">
         <div class="product__wrapper">
-          <h1 class="page__title">Каталог продукции</h1>
+          <h1 class="page__title page__title--catalog">Каталог продукции</h1>
           <ul class="product__list">
           <!-- <ul class="page__list product"> -->
             <li class="product__item">
@@ -76,7 +76,7 @@
                 <source type="image/webp" srcset="img/chicken-big-mobile@1x.webp 1x, img/chicken-big-mobile@2x.webp 2x">
                 <source media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.png 1x, img/chicken-big-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
-                <img class="product__image" src="img/chicken-big-mobile@1x.jpg" srcset="img/chicken-big-mobile@2x.jpg 2x" alt="Cat Energy PRO 1000 г">
+                <img class="product__image product__image--big" src="img/chicken-big-mobile@1x.jpg" srcset="img/chicken-big-mobile@2x.jpg 2x" alt="Cat Energy PRO 1000 г">
               </picture>
               <div class="product__info">
                 <h3 class="product__title"><a href="#" class="product__link">Cat Energy PRO 1000 г</a></h3>
@@ -120,7 +120,7 @@
                 <source type="image/webp" srcset="img/fish-big-mobile@1x.webp 1x, img/fish-big-mobile@2x.webp 2x">
                 <source media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
-                <img class="product__image" src="img/fish-big-mobile@1x.jpg" srcset="img/fish-big-mobile@2x.jpg 2x" alt="Cat Energy PRO 1000 г">
+                <img class="product__image product__image--big" src="img/fish-big-mobile@1x.jpg" srcset="img/fish-big-mobile@2x.jpg 2x" alt="Cat Energy PRO 1000 г">
               </picture>
               <div class="product__info">
                 <h3 class="product__title"><a href="#" class="product__link">Cat Energy PRO 1000 г</a></h3>
@@ -164,7 +164,7 @@
                 <source type="image/webp" srcset="img/buckwheat-big-mobile@1x.webp 1x, img/buckwheat-big-mobile@2x.webp 2x">
                 <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
-                <img class="product__image" src="img/buckwheat-big-mobile@1x.jpg" srcset="img/buckwheat-big-mobile@2x.jpg 2x" alt="Cat Energy SLIM 1000 г">
+                <img class="product__image product__image--big" src="img/buckwheat-big-mobile@1x.jpg" srcset="img/buckwheat-big-mobile@2x.jpg 2x" alt="Cat Energy SLIM 1000 г">
               </picture>
               <div class="product__info">
                 <h3 class="product__title"><a href="#" class="product__link">Cat Energy SLIM 1000 г</a></h3>
@@ -203,9 +203,13 @@
             </li>
             <li class="product__item more-products">
               <!-- <div class="product__info"> -->
-                <picture>
+                <picture class="more-products__picture">
                   <source media="(min-width: 768px)" srcset="img/icon-plus.svg">
-                  <img class="more-products__image" src="img/icon-plus-mobile.svg" width="31" height="31" alt="Показать еще 100500 товаров">
+                  <img class="more-products__image" src="img/icon-plus-mobile.svg" alt="Показать еще 100500 товаров">
+
+                  <!-- <svg class="" width="61" height="61" aria-label="Показать еще 100500 товаров">
+                    <use xlink:href="img/sprite.svg#icon-plus"></use>
+                  </svg> -->
                 </picture>
                 <h3 class="more-products__title"><a href="#" class="more-products__link">Показать еще 100500 товаров</a></h3>
                 <p class="more-products__description">На самом деле вкусов гораздо больше!</p>
@@ -275,7 +279,8 @@
           дилеров!
         </h3>
         <p class="contacts__address">
-          ул. Большая Конюшенная, д. 19/8<br>
+          ул. Большая<br>
+          Конюшенная, д. 19/8<br>
           Санкт-Петербург
         </p>
       </div>

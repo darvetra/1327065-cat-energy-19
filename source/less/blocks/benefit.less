@@ -53,8 +53,8 @@
   .benefit {
     background-color: @white-two;
     background-image: url("../img/index-can-tablet@1x.jpg");
-    background-position: bottom;
-    min-height: 700px; // это нада?
+    background-position: 50% 100%;
+    background-size: 92.1% auto;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-can-tablet@2x.jpg");
@@ -62,7 +62,7 @@
   }
 
   .benefit__wrapper {
-    padding: 0 @tablet-indent;
+    // padding: 0 @tablet-indent;
   }
 
   .benefit__title {
@@ -71,14 +71,17 @@
     color: @black-two;
     text-align: left;
     max-width: 550px;
-    margin-left: 90px;
+    margin-left: 116px;
+    margin-top: 62px;
   }
 
   .benefit__subtitle {
     .font-description-oswald;
+    font-size: 20px;
     color: @black-two;
     text-align: left;
-    margin-left: 90px;
+    margin-left: 118px;
+    margin-top: 28px;
   }
 
   .benefit__image {
@@ -88,23 +91,37 @@
   .benefit__link {
     width: 245px;
     height: 52px;
-    margin-left: 90px;
+    margin-left: 119px;
+    margin-top: 18px;
+    margin-bottom: 68.7%;
+    font-size: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .benefit {
-    background-color: @white-two;
-    background-image: linear-gradient(to right, @white-two 50%, @leaf 50%);
+    background-color: @white-two; // leaf
+    // background-image: linear-gradient(to right, @white-two 50%, @leaf 50%), url("../img/index-can-desktop@1x.png");
+    // background-size: auto, 100%;
 
-    margin-top: -84px;
+    margin-top: -99px;
     padding-top: 84px;
     z-index: 5;
     position: relative;
     width: 100%;
 
+
     background-image: url("../img/index-can-desktop@1x.png"),
-      url("../img/index-background-desktop@1x.jpg");
+      url("../img/index-background-desktop@1x.jpg"),
+      linear-gradient(to right, @white-two 50%, @leaf 50%);
+
+    background-repeat: no-repeat, no-repeat, no-repeat;
+
+    background-position: 63% 67%, 100% 100%, top;
+    background-size: 38.3% auto, 50% auto, 100%;
+
+    // background-image: url("../img/index-can-desktop@1x.png"),
+    //   url("../img/index-background-desktop@1x.jpg");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-can-desktop@2x.png"),
@@ -119,10 +136,13 @@
 
   .benefit__title {
     text-align: left;
+    margin-top: 110px;
+    margin-left: 80px;
   }
 
   .benefit__subtitle {
     text-align: left;
+    margin-left: 80px;
   }
 
   .benefit__image {
@@ -131,5 +151,8 @@
 
   .benefit__link {
     order: 1;
+    margin-left: 80px;
+    margin-top: 22px;
+    margin-bottom: 15.4%;
   }
 }

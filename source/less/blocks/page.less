@@ -29,6 +29,7 @@
 
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
 
   &--line {
     &::after {
@@ -52,21 +53,92 @@
 
 @media (min-width: @tablet-width) {
   .page__title {
-    // для страницы каталога, проверь остальные
-    // margin-right: @tablet-indent;
-    // margin-left: @tablet-indent;
-    margin: 45px 0;
+    margin: 42px 0;
+
+    // для страницы каталога, проверь остальные ??
+
+    //нужно для страницы формы
+    margin-right: @tablet-indent;
+    margin-left: @tablet-indent;
+
+    margin-bottom: 35px;
     font-size: 60px;
+
+    &--catalog {
+      margin-left: 0;
+    }
   }
 
   .page__subtitle {
     margin-right: @tablet-indent;
     margin-left: @tablet-indent;
+
+    font-size: 36px;
+
+    &--line {
+      margin-left: 10px;
+
+      &::after {
+        // content: "";
+        // position: relative;
+        // display: block;
+        top: 22px;
+        right: -@tablet-indent;
+        min-width: 150px;
+        // height: 3px;
+        // background-color: @leaf;
+
+        // flex-grow: 1;
+      }
+
+      &::before {
+        content: "";
+        position: relative;
+
+        top: 22px;
+        left: -40px;
+        width: 60px;
+        height: 3px;
+        background-color: @leaf;
+
+        // flex-grow: 1;
+      }
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page__title {
     width: @content-width;
+
+    margin: 0;
+    margin-top: 40px;
+  }
+
+  .page__subtitle {
+    // margin-right: @tablet-indent;
+    // margin-left: @tablet-indent;
+    // font-size: 36px;
+
+    &--line {
+      // margin-left: 10px;
+
+      &::after {
+        // top: 22px;
+        // right: -@tablet-indent;
+        // min-width: 150px;
+      }
+
+      &::before {
+        // content: "";
+        // position: relative;
+        // top: 22px;
+        left: -140px;
+        width: 160px;
+        // height: 3px;
+        // background-color: @leaf;
+        flex-grow: 1;
+      }
+    }
   }
 }

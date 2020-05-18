@@ -1,9 +1,7 @@
-
 .contacts {
   background-color: @white-three;
 
   display: flex;
-
 }
 
 .contacts__wrapper {
@@ -13,6 +11,10 @@
 
   margin: 0 auto;
   width: 100%;
+
+  &--index {
+    background-color: @white-two;
+  }
 }
 
 .contacts__dealers {
@@ -37,8 +39,25 @@
 
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
-    padding: 0 @tablet-indent;
+    padding: 0 @tablet-indent-form;
     width: 100%;
+  }
+
+  .contacts__dealers {
+    font-size: 20px;
+    line-height: 1.25;
+
+    margin-top: 66px;
+    margin-bottom: 60px;
+  }
+
+  .contacts__address {
+    font-size: 16px;
+    line-height: 1.25;
+
+    margin-top: 66px;
+    margin-bottom: 60px;
+    text-align: right;
   }
 }
 
@@ -53,7 +72,10 @@
   }
 
   .contacts__wrapper {
-    width: @content-width;
+    width: 570px;
+    margin: 0;
+    margin-right: auto;
+    margin-left: 109px;
     padding: 0;
     justify-content: start;
   }
@@ -75,10 +97,12 @@
     height: 201px;
     margin: 0;
     padding: 0;
-    padding-top: 66px;
+    padding-top: 64px;
     padding-bottom: 59px;
-    padding-left: 49px;
+    padding-left: 40px;
     padding-right: 76px;
     background-color: @white-two;
+    text-align: left;
+    font-size: 16px;
   }
 }

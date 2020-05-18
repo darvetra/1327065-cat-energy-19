@@ -57,8 +57,8 @@
           <h2 class="visually-hidden">Возможности</h2>
           <ul class="features__list">
             <!-- <li class="features__item features__item--slim"> -->
-            <li class="features__item">
-              <h3 class="features__title features__title--slim">Похудение</h3>
+            <li class="features__item features__item--slim">
+              <h3 class="features__title">Похудение</h3>
               <p class="features__description">
                 Ваш кот весит больше собаки и
                 почти утратил способность лазить
@@ -68,8 +68,8 @@
               </p>
               <a href="catalog.html#slim" class="features__link">Каталог slim</a>
             </li>
-            <li class="features__item">
-              <h3 class="features__title features__title--pro">Набор массы</h3>
+            <li class="features__item features__item--pro">
+              <h3 class="features__title">Набор массы</h3>
               <p class="features__description">
                 Заработать авторитет среди
                 дворовых котов и даже собак?
@@ -129,17 +129,23 @@
               <dt class="example__term">60 дней</dt>
               <dd class="example__definition example__definition--time">Затрачено времени</dd>
             </dl>
-            <span class="example__secondary-description">Затраты на питание: 15 000 руб.</span>
+            <span class="example__secondary-description">Затраты на питание: </span>
+            <span class="example__secondary-description">15 000 руб.</span>
           </div>
           <form action="https://echo.htmlacademy.ru/courses" method="GET" class="example__form">
-            <!-- <img src="https://via.placeholder.com/150x150" alt="" class="example__image--fat" width="311" height="232"> -->
-            <div class="example__inputs">
+
+            <!-- <div class="example__inputs">
               <input type="radio" name="example-range" id="example-before" >
               <input type="radio" name="example-range" id="example-after">
-            </div>
+            </div> -->
             <div class="example__controls">
-              <label for="example-before" aria-label="Было" class="example__description-controls">Было</label>
-              <label for="example-after" aria-label="Стало" class="example__description-controls">Стало</label>
+              <!-- <span class="example__description-controls">Было</span> -->
+              <div class="example__ctrl">
+                <input class="example__checkbox" type="checkbox">
+              </div>
+              <!-- <span class="example__description-controls">Стало</span> -->
+              <!-- <label for="example-before" aria-label="Было" class="example__description-controls">Было</label> -->
+              <!-- <label for="example-after" aria-label="Стало" class="example__description-controls">Стало</label> -->
             </div>
           </form>
         </div>
@@ -147,14 +153,15 @@
     </main>
 
     <section class="contacts">
-      <div class="contacts__wrapper">
+      <div class="contacts__wrapper contacts__wrapper--index">
         <h3 class="contacts__dealers">
           Приглашаем<br>
           к сотрудничеству<br>
           дилеров!
         </h3>
         <p class="contacts__address">
-          ул. Большая Конюшенная, д. 19/8<br>
+          ул. Большая<br>
+          Конюшенная, д. 19/8<br>
           Санкт-Петербург
         </p>
       </div>
