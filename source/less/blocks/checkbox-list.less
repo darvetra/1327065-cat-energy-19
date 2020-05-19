@@ -100,13 +100,24 @@
   }
 
   .checkbox-list__checkbox:checked + .checkbox-list__pseudo-checkbox::before {
-
-
     top: 11px;
     left: 9px;
-
   }
 }
 
 @media (min-width: @desktop-width) {
+  .checkbox-list__list-item {
+    min-width: auto;
+    max-width: 295px;
+    // width: 290px;
+
+    &:nth-of-type(2) {
+      max-width: 355px;
+      width: 355px;
+    }
+
+    &:nth-of-type(4) {
+      padding-left: 50px;
+    }
+  }
 }
