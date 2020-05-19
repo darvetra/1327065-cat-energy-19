@@ -203,14 +203,18 @@
             </li>
             <li class="product__item more-products">
               <!-- <div class="product__info"> -->
-                <picture class="more-products__picture">
+                <!-- <picture class="more-products__picture">
                   <source media="(min-width: 768px)" srcset="img/icon-plus.svg">
                   <img class="more-products__image" src="img/icon-plus-mobile.svg" alt="Показать еще 100500 товаров">
 
-                  <!-- <svg class="" width="61" height="61" aria-label="Показать еще 100500 товаров">
-                    <use xlink:href="img/sprite.svg#icon-plus"></use>
-                  </svg> -->
-                </picture>
+
+                </picture> -->
+                <svg class="more-products__image more-products__image--mobile-plus" width="30" height="30" aria-label="Показать еще 100500 товаров">
+                  <use xlink:href="img/sprite.svg#icon-plus-mobile"></use>
+                </svg>
+                <svg class="more-products__image more-products__image--plus" width="61" height="61" aria-label="Показать еще 100500 товаров">
+                  <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </svg>
                 <h3 class="more-products__title"><a href="#" class="more-products__link">Показать еще 100500 товаров</a></h3>
                 <p class="more-products__description">На самом деле вкусов гораздо больше!</p>
               <!-- </div> -->
@@ -222,7 +226,7 @@
 
       <section class="product-optional">
         <div class="product-optional__wrapper">
-          <h2 class="page__subtitle page__subtitle--line product-optional__title product-optional__title--line">Дополнительные товары</h1>
+          <h2 class="product-optional__title product-optional__title--line">Дополнительные товары</h1>
           <ul class="product-optional__list">
             <li class="product-optional__item">
               <h3 class="product-optional__subtitle"><a href="#" class="product__link">Сахарозаменитель</a></h3>

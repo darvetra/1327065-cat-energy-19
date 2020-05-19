@@ -14,38 +14,38 @@
   text-align: left;
 }
 
-.page__subtitle {
-  .font-title;
-  font-size: 24px;
-  line-height: 1;
-  color: @black-two;
-  text-align: left;
+// .page__subtitle {
+//   .font-title;
+//   font-size: 24px;
+//   line-height: 1;
+//   color: @black-two;
+//   text-align: left;
 
-  // для заголовка дополнительные товары в мобильной версии, не нужны, проверь остальные, переопределил другим стилем эти отступы
-  margin-right: @mobile-indent;
-  margin-left: @mobile-indent;
+//   // для заголовка дополнительные товары в мобильной версии, не нужны, проверь остальные, переопределил другим стилем эти отступы
+//   margin-right: @mobile-indent;
+//   margin-left: @mobile-indent;
 
-  position: relative;
+//   position: relative;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
 
-  &--line {
-    &::after {
-      content: "";
-      position: relative;
-      // display: block;
-      top: 14px;
-      right: -@mobile-indent;
-      min-width: 99px;
-      height: 3px;
-      background-color: @leaf;
+//   &--line {
+//     &::after {
+//       content: "";
+//       position: relative;
+//       // display: block;
+//       top: 14px;
+//       right: -@mobile-indent;
+//       min-width: 99px;
+//       height: 3px;
+//       background-color: @leaf;
 
-      flex-grow: 1;
-    }
-  }
-}
+//       flex-grow: 1;
+//     }
+//   }
+// }
 
 .page__gift {
   margin-bottom: 35px;
@@ -69,41 +69,46 @@
     }
   }
 
-  .page__subtitle {
-    margin-right: @tablet-indent;
-    margin-left: @tablet-indent;
+  // .page__subtitle {
+  //   margin-right: @tablet-indent;
+  //   margin-left: @tablet-indent;
 
-    font-size: 36px;
+  //   font-size: 36px;
 
-    &--line {
-      margin-left: 10px;
+  //   &--line {
+  //     margin-left: 10px;
 
-      &::after {
-        // content: "";
-        // position: relative;
-        // display: block;
-        top: 22px;
-        right: -@tablet-indent;
-        min-width: 150px;
-        // height: 3px;
-        // background-color: @leaf;
+  //     &::after {
+  //       // content: "";
+  //       // position: relative;
+  //       // display: block;
+  //       top: 22px;
+  //       right: -@tablet-indent;
+  //       min-width: 150px;
+  //       // height: 3px;
+  //       // background-color: @leaf;
 
-        // flex-grow: 1;
-      }
+  //       // flex-grow: 1;
+  //     }
 
-      &::before {
-        content: "";
-        position: relative;
+  //     &::before {
+  //       content: "";
+  //       position: relative;
 
-        top: 22px;
-        left: -40px;
-        width: 60px;
-        height: 3px;
-        background-color: @leaf;
+  //       top: 22px;
+  //       left: -40px;
+  //       width: 60px;
+  //       height: 3px;
+  //       background-color: @leaf;
 
-        // flex-grow: 1;
-      }
-    }
+  //       // flex-grow: 1;
+  //     }
+  //   }
+  // }
+
+  .page__gift {
+    margin-top: 44px;
+    margin-bottom: 76px;
   }
 }
 
@@ -115,30 +120,30 @@
     margin-top: 40px;
   }
 
-  .page__subtitle {
-    // margin-right: @tablet-indent;
-    // margin-left: @tablet-indent;
-    // font-size: 36px;
+  // .page__subtitle {
+  //   // margin-right: @tablet-indent;
+  //   // margin-left: @tablet-indent;
+  //   // font-size: 36px;
 
-    &--line {
-      // margin-left: 10px;
+  //   &--line {
+  //     // margin-left: 10px;
 
-      &::after {
-        // top: 22px;
-        // right: -@tablet-indent;
-        // min-width: 150px;
-      }
+  //     &::after {
+  //       // top: 22px;
+  //       // right: -@tablet-indent;
+  //       // min-width: 150px;
+  //     }
 
-      &::before {
-        // content: "";
-        // position: relative;
-        // top: 22px;
-        left: -140px;
-        width: 160px;
-        // height: 3px;
-        // background-color: @leaf;
-        flex-grow: 1;
-      }
-    }
-  }
+  //     &::before {
+  //       // content: "";
+  //       // position: relative;
+  //       // top: 22px;
+  //       left: -140px;
+  //       width: 160px;
+  //       // height: 3px;
+  //       // background-color: @leaf;
+  //       flex-grow: 1;
+  //     }
+  //   }
+  // }
 }

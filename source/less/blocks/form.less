@@ -14,6 +14,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: -3px;
 }
 
 .form__description {
@@ -22,6 +23,7 @@
   color: @black-two;
   text-align: left;
   margin: 0;
+  margin-bottom: 2px;
   padding: 0 @mobile-indent;
 }
 
@@ -68,19 +70,6 @@
   height: 45px;
 }
 
-//заголовок
-.form__subtitle {
-  margin-top: 31px;
-
-  &--comment {
-    margin-top: 14px;
-  }
-
-  &--add {
-    margin-top: 27px;
-  }
-}
-
 // радио список
 
 .form__list-target {
@@ -92,10 +81,78 @@
   padding-top: 20px;
 }
 
+//заголовок
+// .form__subtitle {
+//   margin-top: 31px;
+
+//   &--comment {
+//     margin-top: 14px;
+//   }
+
+//   &--add {
+//     margin-top: 27px;
+//   }
+// }
+
+.form__subtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  position: relative;
+  margin: 0;
+  margin-top: 31px;
+  margin-left: @mobile-indent;
+  margin-right: @mobile-indent;
+  padding-bottom: 34px;
+  // border-bottom: solid 1px @very-light-pink-three;
+
+  .font-title;
+  font-size: 24px;
+  line-height: 1;
+  color: @black-two;
+  text-align: left;
+
+  &--line {
+    &::after {
+      content: "";
+      // position: relative;
+      position: absolute;
+      top: 14px;
+      right: 0;
+      margin-right: -83px;
+      // min-width: 99px;
+      height: 3px;
+      background-color: @leaf;
+      min-width: 162px;
+      flex-grow: 1;
+    }
+  }
+
+  &--comment {
+    margin-top: 14px;
+
+    &::after {
+      margin-right: -25px;
+    }
+  }
+
+  &--add {
+    padding-bottom: 0;
+    margin-top: 29px;
+    margin-bottom: 18px;
+
+    &::after {
+      margin-right: -46px;
+    }
+  }
+}
+
 // контакты владельца
 .form__contact-list {
   list-style-type: none;
   padding: 0 @mobile-indent;
+  margin: 0;
   margin-bottom: 0;
 }
 
@@ -127,7 +184,7 @@
   line-height: 1.13;
   color: @greyish-brown;
   margin: 0 @mobile-indent;
-  margin-top: 15px;
+  margin-top: 0;
 
   padding: 12px 13px;
   height: 150px;
@@ -149,7 +206,7 @@
 
 .form__button {
   margin: 0 @mobile-indent;
-  padding-top: 6px;
+  padding-top: 2px;
   font-size: 16px;
 }
 
@@ -191,44 +248,84 @@
   .form__list-target {
     margin: 0 @tablet-indent-form;
     margin-top: 42px;
-    margin-bottom: 78px;
+    margin-bottom: 46px;
     border: 1px solid @very-light-pink-three;
   }
 
   //заголовки
+  // .form__subtitle {
+  //   // margin: 0 @tablet-indent-form;
+  //   margin-top: 0;
+  //   margin-right: 30px;
+
+  //   &--line {
+  //     &::after {
+  //       // content: "";
+  //       // position: relative;
+
+  //       // top: 22px;
+  //       // right: -@tablet-indent-form;
+  //       // right: -@tablet-indent;
+  //       // min-width: 99px;
+  //       // height: 3px;
+  //       // background-color: @leaf;
+
+  //       // flex-grow: 1;
+  //     }
+  //   }
+  // }
+
   .form__subtitle {
-    // margin: 0 @tablet-indent-form;
-    margin-top: 0;
-    margin-right: 30px;
+    margin-left: 69px;
+    border: none;
+    font-size: 36px;
+    justify-content: flex-start;
+    position: relative;
 
     &--line {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 22px;
+        left: 0;
+        margin-left: -98px;
+        width: 60px;
+        height: 3px;
+        background-color: @leaf;
+      }
+
       &::after {
-        // content: "";
-        // position: relative;
+        top: 22px;
+        right: 0;
+        margin-right: -375px;
+        min-width: 500px;
+      }
+    }
 
-        // top: 22px;
-        // right: -@tablet-indent-form;
-        // right: -@tablet-indent;
-        // min-width: 99px;
-        // height: 3px;
-        // background-color: @leaf;
+    &--comment {
+      &::after {
+        margin-right: -40px;
+      }
+    }
 
-        // flex-grow: 1;
+    &--add {
+      &::after {
+        margin-right: -75px;
       }
     }
   }
 
   //контакт
   .form__contact-list {
-    margin-top: 46px;
-    margin-bottom: 45px;
+    margin-top: 42px;
+    margin-bottom: 32px;
     padding: 0 @tablet-indent-form;
   }
 
   .form__textarea {
     margin: 0 @tablet-indent-form;
-    margin-top: 45px;
-    margin-bottom: 65px;
+    margin-top: 42px;
+    margin-bottom: 34px;
     height: 176px;
     font-size: 20px;
     padding: 15px;
@@ -237,6 +334,7 @@
 
   .form__optionally {
     padding: 0 @tablet-indent-form;
+    margin-top: 26px;
   }
 
   //контролы
@@ -276,7 +374,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    margin-bottom: 200px; // Временно
+    margin-bottom: 106px;
   }
 
   .form__description {
@@ -300,25 +398,99 @@
     margin-bottom: 68px;
   }
 
+  // .form__subtitle {
+  //   width: @content-width;
+  // }
+
   .form__subtitle {
-    width: @content-width;
+    width: 520px;
+    margin-top: 0;
+    margin-left: 0;
+    justify-content: space-between;
+
+    &--line {
+      &::before {
+        // content: "";
+        // position: relative;
+        // top: 22px;
+        left: -442px;
+        min-width: 500px;
+        // height: 3px;
+        // background-color: @leaf;
+        flex-grow: 1;
+      }
+
+      &::after {
+        flex-grow: 1;
+        right: 0;
+        margin-right: -1532px;
+        // min-width: 2000px;
+        min-width: 1500px; //
+      }
+    }
+
+    &--comment {
+      &::after {
+        margin-right: -1200px;
+      }
+    }
+
+    &--add {
+      &::after {
+        margin-right: -1232px;
+      }
+    }
   }
 
   .form__contact-list {
     display: flex;
     justify-content: space-between;
+    padding: 0;
+    margin-bottom: 48px;
   }
 
   .form__contact-list-item {
-    width: @content-width / 2;
+    // width: @content-width / 2;
+    width: 570px;
+
+    &:last-of-type {
+      padding-left: 80px;
+      width: 650px;
+    }
   }
 
   .form__textarea {
     width: @content-width;
+    margin: 42px 0;
+    margin-bottom: 64px;
   }
 
   .form__optionally {
     width: @content-width;
     display: flex;
+    padding: 0;
+  }
+
+  .form__button {
+    // margin: 0 @tablet-indent-form;
+    // margin-right: 60px;
+    // font-size: 20px;
+
+    // min-width: 283px;
+    // height: 52px;
+    width: 568px;
+    height: 54px;
+    margin: 0;
+    margin-top: 8px;
+    padding-top: 0;
+  }
+
+  .form__footnote {
+    // text-align: left;
+    // margin: 0;
+    // font-size: 16px;
+    // padding-top: 17px;
+    margin-left: 82px;
+    margin-top: 8px;
   }
 }

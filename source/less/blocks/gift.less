@@ -51,22 +51,54 @@
 
 @media (min-width: @tablet-width) {
   .gift__wrapper {
+    min-height: 200px;
+    flex-direction: row;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
     }
   }
+
+  .gift__link {
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 64px;
+    padding-left: 332px;
+    padding-top: 8px;
+    width: 526px;
+    text-align: left;
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .gift__wrapper {
-    width: auto;
+    width: 245px;
+    height: 289px;
+    flex-direction: column;
 
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
+  }
+
+  .gift__link {
+    padding: 0;
+    width: auto;
+    text-align: center;
+    margin-top: 190px;
+
+    &::before {
+      top: 0;
+      left: 52px;
+      margin-top: -122px;
     }
   }
 }
