@@ -45,5 +45,8 @@
   ],
   "engines": {
     "node": "8.16"
+  },
+  "dependencies": {
+    "imagemin-jpegtran": "^6.0.0"
   }
 }
