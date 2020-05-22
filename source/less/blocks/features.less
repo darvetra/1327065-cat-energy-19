@@ -276,5 +276,22 @@
 
   .features__link {
     min-width: 153px;
+
+    &:hover,
+    &:focus {
+      &::after {
+        background-position: right;
+        width: 34px;
+        height: 12px;
+        right: 0;
+        top: 4px;
+        margin-right: -9px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 11'%3E%3Cpath fill='%233f4242' d='M25.4 0L32 5.5 25.4 11V6.6H0V4.4h25.4z'/%3E%3C/svg%3E");
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

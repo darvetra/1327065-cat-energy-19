@@ -11,6 +11,10 @@
   position: relative;
 
   cursor: pointer; // ------------------------------------- потом проверь все интерактивные элементы на предмет курсора
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .radio-list__radio-button {
@@ -35,6 +39,15 @@
   position: absolute;
   top: -10px;
   left: 0;
+
+  &:hover,
+  &:focus {
+    border-color: @pinkish-grey-two;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .radio-list__pseudo-label {
