@@ -14,6 +14,8 @@
 
 .example__essence {
   padding-top: 8px;
+  // display: flex;
+  // flex-direction: column;
 }
 
 .example__title {
@@ -119,8 +121,8 @@
 
 .example__controls {
   margin: 0 auto;
-  margin-top: 110%;
-  margin-bottom: 38px;
+  margin-top: 113.5%;
+  margin-bottom: 44px;
 
   display: flex;
   flex-direction: row;
@@ -204,13 +206,18 @@
   }
 }
 
+.example__description-block {
+  display: flex;
+  justify-content: center;
+}
+
 .example__secondary-description {
   .font-description-oswald;
   line-height: 1.43;
   color: @black-two;
   text-align: center;
-  display: block;
-  margin-top: 35px;
+  display: inline-block;
+  margin-top: 18px;
 }
 
 @media (min-width: @tablet-width) {
@@ -289,7 +296,7 @@
 
     background-position: 100% 48%;
     background-size: 98% auto;
-    margin-bottom: 50px;
+    margin-bottom: 43px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/before-tablet@2x.png");
@@ -305,13 +312,16 @@
     &::before {
       font-size: 20px;
       border-bottom: 1px dotted @very-light-pink-three;
-      // margin-left: 5px;
+      margin-left: -70px;
       // margin-right: 20px;
+      padding-bottom: 5px;
     }
 
     &::after {
       font-size: 20px;
       border-bottom: 1px dotted @very-light-pink-three;
+      margin-right: -70px;
+      padding-bottom: 5px;
     }
   }
 
@@ -341,12 +351,20 @@
     }
   }
 
+  .example__description-block {
+    flex-direction: column;
+  }
+
   .example__secondary-description {
     max-width: 320px;
     font-size: 20px;
     // line-height: 1;
     text-align: right;
-    margin-top: 35px;
+    margin-top: 15px;
+
+    &:last-of-type {
+      margin-top: 0;
+    }
   }
 }
 
@@ -414,7 +432,6 @@
     background-color: @white-three;
 
     &--time {
-
       right: 90px;
     }
   }
