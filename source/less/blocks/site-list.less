@@ -57,13 +57,31 @@
     color: @black-two;
     font-size: 20px;
     line-height: 1.25;
-
     max-height: 60px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: @black-two-60;
+    }
+
+    &:active {
+      color: @black-two-30;
+    }
   }
 
   .site-list__item--index {
     color: @white-two;
     border-color: @white-two;
+
+    &:hover,
+    &:focus {
+      color: @white-60;
+    }
+
+    &:active {
+      color: @white-30;
+    }
   }
 
   .site-list__link--index {

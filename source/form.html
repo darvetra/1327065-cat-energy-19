@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="css/style.min.css">
 
     <title>HTML Academy: Кэт энерджи</title>
+
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async></script>
+
   </head>
   <body>
 
@@ -100,23 +107,25 @@
               <li class="form__contact-list-item">
                 <label class="form__label">
                   <span class="form__notion">E-mail:* </span>
+                  <input type="text" placeholder="kuklachev@gmail.com" class="form__input-text">
                   <span class="form__input-icon form__input-icon--mail">
                     <svg class="" width="17" height="13">
                       <use xlink:href="img/sprite.svg#icon-mail"></use>
                     </svg>
                   </span>
-                  <input type="text" placeholder="kuklachev@gmail.com" class="form__input-text">
+                  <!-- <input type="text" placeholder="kuklachev@gmail.com" class="form__input-text"> -->
                 </label>
               </li>
               <li class="form__contact-list-item">
                 <label class="form__label">
                   <span class="form__notion">Телефон:* </span>
+                  <input type="text" placeholder="8 (960) 900-60-90" class="form__input-text">
                   <span class="form__input-icon form__input-icon--phone">
                     <svg class="" width="20" height="20">
                       <use xlink:href="img/sprite.svg#icon-phone"></use>
                     </svg>
                   </span>
-                  <input type="text" placeholder="8 (960) 900-60-90" class="form__input-text">
+                  <!-- <input type="text" placeholder="8 (960) 900-60-90" class="form__input-text"> -->
                 </label>
               </li>
             </ul>
@@ -176,11 +185,13 @@
           к сотрудничеству<br>
           дилеров!
         </h3>
-        <p class="contacts__address">
-          ул. Большая<br>
-          Конюшенная, д. 19/8<br>
-          Санкт-Петербург
-        </p>
+        <div class="contacts__address">
+          <p class="contacts__paragraph">
+            ул. Большая<br />
+            Конюшенная, д. 19/8
+          </p>
+          <p class="contacts__paragraph">Санкт-Петербург</p>
+        </div>
       </div>
     </section>
 
@@ -195,7 +206,12 @@
     <footer class="footer">
       <div class="footer__wrapper">
         <a href="index.html" class="footer__logo">
-          <svg class="" width="128" height="24" aria-label="Кэт энерджи – Функциональное питание для котов">
+          <svg
+            class="footer__logo-image"
+            width="128"
+            height="24"
+            aria-label="Кэт энерджи – Функциональное питание для котов"
+          >
             <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
           </svg>
         </a>
@@ -203,22 +219,61 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-                <svg class="" width="22" height="12" aria-label="Мы в Вконтакте">
+                <svg
+                  class="social__icon social__icon--mobile"
+                  width="22"
+                  height="12"
+                  aria-label="Мы в Вконтакте"
+                >
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
+                </svg>
+                <svg
+                  class="social__icon social__icon--other"
+                  width="30"
+                  height="16"
+                  aria-label="Мы в Вконтакте"
+                >
+                  <use xlink:href="img/sprite.svg#icon-vk-svg"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-                <svg class="" width="17" height="17" aria-label="Мы в Инстаграме">
-                  <use xlink:href="img/sprite.svg#icon-ig"></use>
+                <svg
+                  class="social__icon social__icon--mobile"
+                  width="17"
+                  height="17"
+                  aria-label="Мы в Инстаграме"
+                >
+                  <use xlink:href="img/sprite.svg#icon-insta"></use>
+                </svg>
+                <svg
+                  class="social__icon social__icon--other"
+                  width="23"
+                  height="23"
+                  aria-label="Мы в Инстаграме"
+                >
+                  <use xlink:href="img/sprite.svg#icon-insta-svg"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-                <svg class="" width="10" height="19" aria-label="Мы в Фейсбуке">
+                <svg
+                  class="social__icon social__icon--mobile"
+                  width="10"
+                  height="19"
+                  aria-label="Мы в Фейсбуке"
+                >
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
+                </svg>
+                <svg
+                  class="social__icon social__icon--other"
+                  width="14"
+                  height="28"
+                  aria-label="Мы в Фейсбуке"
+                >
+                  <use xlink:href="img/sprite.svg#icon-fb-svg"></use>
                 </svg>
               </a>
             </li>
@@ -227,8 +282,13 @@
         <div class="footer__copyright copyright">
           <b class="copyright__text">HTML Academy</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="" width="27" height="34" aria-label="HTML Academy">
-              <use xlink:href="img/sprite.svg#icon-academy"></use>
+            <svg
+              class="copyrght__icon"
+              width="44"
+              height="40"
+              aria-label="HTML Academy"
+            >
+              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
             </svg>
           </a>
         </div>

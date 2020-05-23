@@ -68,6 +68,31 @@
   padding-left: 14px;
 
   height: 45px;
+
+  border: 1px solid @pinkish-grey-three;
+
+  &:hover {
+    border: 1px solid @very-light-pink-three;
+  }
+
+  &:focus,
+  &:active {
+    border: 2px solid @greyish-brown;
+    outline: none;
+  }
+
+  &:invalid {
+    border: 2px solid @peachy-pink;
+  }
+}
+
+.form__input-text:focus + .form__input-icon svg,
+.form__input-text:active + .form__input-icon svg {
+  fill: @leaf;
+}
+
+.form__input-text:invalid + .form__input-icon svg {
+  fill: @peachy-pink;
 }
 
 // радио список

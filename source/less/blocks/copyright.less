@@ -8,14 +8,47 @@
   .font-description-arial;
   font-size: 16px;
   color: @greyish-brown;
-  margin-top: 9px;
+  margin-top: 7px;
 }
 
-.copyright__link {
+.copyrght__icon {
+  fill: @beast-grey;
+  // width: 27px;
+  // height: 34px;
+  position: relative;
+  top: 0;
+  right: 0;
+  margin-right: -8px;
+  margin-top: -2px;
 }
 
 @media (min-width: @tablet-width) {
   .copyright {
     width: 164px;
+  }
+
+  //хм
+  .copyright__text {
+    margin-top: 11px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__text {
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .copyrght__icon {
+    &:hover,
+    &:focus {
+      fill: @leaf;
+    }
+
+    &:active {
+      fill: @leaf;
+      opacity: 0.3;
+    }
   }
 }

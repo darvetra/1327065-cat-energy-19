@@ -10,6 +10,10 @@
   position: relative;
 
   cursor: pointer; // ------------------------------------- потом проверь все интерактивные элементы на предмет курсора
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .checkbox-list__checkbox {
@@ -35,6 +39,15 @@
   position: absolute;
   top: -7px;
   left: 0;
+
+  &:hover,
+  &:focus {
+    border-color: @pinkish-grey-two;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .checkbox-list__pseudo-label {

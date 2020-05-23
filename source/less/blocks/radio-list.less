@@ -1,6 +1,4 @@
 // радио кнопки
-.radio-list {
-}
 
 .radio-list__list-item {
   margin-top: 6px;
@@ -10,7 +8,11 @@
 .radio-list__label {
   position: relative;
 
-  cursor: pointer; // ------------------------------------- потом проверь все интерактивные элементы на предмет курсора
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .radio-list__radio-button {
@@ -35,6 +37,15 @@
   position: absolute;
   top: -10px;
   left: 0;
+
+  &:hover,
+  &:focus {
+    border-color: @pinkish-grey-two;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .radio-list__pseudo-label {
@@ -48,9 +59,9 @@
 
 /* Стилизуем радиобаттоны в состоянии фокуса, во имя доступности, так как шаблоном подобное состояние не предусмотрено */
 .radio-list__radio-button:focus + .radio-list__pseudo-radio {
-  outline: -webkit-focus-ring-color auto 1px;
+  // outline: -webkit-focus-ring-color auto 1px;
   outline: @focus-color auto 1px;
-  outline-color: -webkit-focus-ring-color;
+  // outline-color: -webkit-focus-ring-color;
   outline-color: @focus-color;
   outline-style: auto;
   outline-width: 1px;
@@ -94,7 +105,4 @@
     top: 10px;
     left: 10px;
   }
-}
-
-@media (min-width: @desktop-width) {
 }
