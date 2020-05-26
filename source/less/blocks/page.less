@@ -3,6 +3,12 @@
   padding: 0;
 }
 
+.page--no-lines {
+  //убираем горизонтальный скролл (Заголовки с зелеными полосами)
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .page__title {
   .font-title;
   line-height: 1.67;
@@ -14,39 +20,6 @@
   text-align: left;
 }
 
-// .page__subtitle {
-//   .font-title;
-//   font-size: 24px;
-//   line-height: 1;
-//   color: @black-two;
-//   text-align: left;
-
-//   // для заголовка дополнительные товары в мобильной версии, не нужны, проверь остальные, переопределил другим стилем эти отступы
-//   margin-right: @mobile-indent;
-//   margin-left: @mobile-indent;
-
-//   position: relative;
-
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: flex-start;
-
-//   &--line {
-//     &::after {
-//       content: "";
-//       position: relative;
-//       // display: block;
-//       top: 14px;
-//       right: -@mobile-indent;
-//       min-width: 99px;
-//       height: 3px;
-//       background-color: @leaf;
-
-//       flex-grow: 1;
-//     }
-//   }
-// }
-
 .page__gift {
   margin-bottom: 35px;
 }
@@ -54,8 +27,6 @@
 @media (min-width: @tablet-width) {
   .page__title {
     margin: 42px 0;
-
-    // для страницы каталога, проверь остальные ??
 
     //нужно для страницы формы
     margin-right: @tablet-indent;
@@ -68,43 +39,6 @@
       margin-left: 0;
     }
   }
-
-  // .page__subtitle {
-  //   margin-right: @tablet-indent;
-  //   margin-left: @tablet-indent;
-
-  //   font-size: 36px;
-
-  //   &--line {
-  //     margin-left: 10px;
-
-  //     &::after {
-  //       // content: "";
-  //       // position: relative;
-  //       // display: block;
-  //       top: 22px;
-  //       right: -@tablet-indent;
-  //       min-width: 150px;
-  //       // height: 3px;
-  //       // background-color: @leaf;
-
-  //       // flex-grow: 1;
-  //     }
-
-  //     &::before {
-  //       content: "";
-  //       position: relative;
-
-  //       top: 22px;
-  //       left: -40px;
-  //       width: 60px;
-  //       height: 3px;
-  //       background-color: @leaf;
-
-  //       // flex-grow: 1;
-  //     }
-  //   }
-  // }
 
   .page__gift {
     margin-top: 44px;
@@ -119,31 +53,4 @@
     margin: 0;
     margin-top: 40px;
   }
-
-  // .page__subtitle {
-  //   // margin-right: @tablet-indent;
-  //   // margin-left: @tablet-indent;
-  //   // font-size: 36px;
-
-  //   &--line {
-  //     // margin-left: 10px;
-
-  //     &::after {
-  //       // top: 22px;
-  //       // right: -@tablet-indent;
-  //       // min-width: 150px;
-  //     }
-
-  //     &::before {
-  //       // content: "";
-  //       // position: relative;
-  //       // top: 22px;
-  //       left: -140px;
-  //       width: 160px;
-  //       // height: 3px;
-  //       // background-color: @leaf;
-  //       flex-grow: 1;
-  //     }
-  //   }
-  // }
 }

@@ -1,13 +1,17 @@
 // радио кнопки
+.radio-list {
+  padding-bottom: 5px;
+}
 
 .radio-list__list-item {
-  margin-top: 6px;
+  margin-top: 5px;
   margin-bottom: 24px;
 }
 
 .radio-list__label {
   position: relative;
-
+  top: 0;
+  left: 0;
   cursor: pointer;
 
   &:active {
@@ -18,7 +22,6 @@
 .radio-list__radio-button {
   /* скрываем радио баттоны правильно */
   position: absolute;
-
   appearance: none;
 
   /* скрываем радио баттоны в IE 11 */
@@ -35,7 +38,7 @@
   height: 30px;
   display: block;
   position: absolute;
-  top: -10px;
+  top: -5px;
   left: 0;
 
   &:hover,
@@ -101,7 +104,6 @@
   .radio-list__radio-button:checked + .radio-list__pseudo-radio::before {
     width: 18px;
     height: 18px;
-
     top: 10px;
     left: 10px;
   }

@@ -37,7 +37,6 @@
   min-width: 140px;
 }
 
-
 .contacts__paragraph {
   margin: 0;
 }
@@ -83,12 +82,14 @@
   }
 
   .contacts__wrapper {
-    width: 570px;
-    margin: 0;
-    margin-right: auto;
-    margin-left: 109px;
+    width: @content-width;
+    margin: 0 auto;
     padding: 0;
     justify-content: start;
+
+    &--index {
+      background-color: transparent;
+    }
   }
 
   .contacts__dealers {

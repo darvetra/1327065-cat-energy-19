@@ -14,7 +14,6 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-
   position: relative;
   margin: 0;
   margin-top: 28px;
@@ -30,11 +29,9 @@
   &--line {
     &::after {
       content: "";
-      // position: relative;
       position: absolute;
       top: 14px;
       right: -@mobile-indent;
-      // min-width: 99px;
       height: 3px;
       background-color: @leaf;
       min-width: 53px;
@@ -135,7 +132,6 @@
   .product-optional__subtitle {
     padding-left: 37px;
     margin-top: 25px;
-
     width: 50%;
   }
 
@@ -166,7 +162,7 @@
 
 @media (min-width: @desktop-width) {
   .product-optional {
-    margin-bottom: 106px; // vremenno
+    margin-bottom: 106px;
   }
 
   .product-optional__wrapper {
@@ -186,13 +182,8 @@
 
     &--line {
       &::before {
-        // content: "";
-        // position: relative;
-        // top: 22px;
         left: -1040px;
         min-width: 1000px;
-        // height: 3px;
-        // background-color: @leaf;
         flex-grow: 1;
       }
 
@@ -200,7 +191,6 @@
         flex-grow: 1;
         right: 0;
         margin-right: -1314px;
-        // min-width: 2000px;
         min-width: 1300px;
       }
     }

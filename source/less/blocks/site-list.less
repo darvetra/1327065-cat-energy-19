@@ -17,7 +17,7 @@
 .main-nav--closed .site-list__item {
   display: none;
 
-  // Если захочешь показать пользователю, где он сейчас находится, интересная фича
+  // Если захочешь показать пользователю, где он сейчас находится, интересная фича, оставить
   // &--active {
   //   display: block;
   // }
@@ -26,7 +26,6 @@
 @media (min-width: @tablet-width) {
   .site-list {
     flex-direction: row;
-    // justify-content: flex-end;
   }
 
   .site-list__item {
@@ -53,6 +52,12 @@
 }
 
 @media (min-width: @desktop-width) {
+  .site-list {
+    width: @content-width / 2;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
   .site-list__item {
     color: @black-two;
     font-size: 20px;
@@ -86,6 +91,15 @@
 
   .site-list__link--index {
     color: @white-two;
+
+    &:hover,
+    &:focus {
+      color: @white-60;
+    }
+
+    &:active {
+      color: @white-30;
+    }
   }
 
   .main-nav--closed .site-list__item {

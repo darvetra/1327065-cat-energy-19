@@ -14,8 +14,6 @@
 
 .example__essence {
   padding-top: 8px;
-  // display: flex;
-  // flex-direction: column;
 }
 
 .example__title {
@@ -37,24 +35,23 @@
 
 .example__deflist {
   display: flex;
-  // flex-direction: column;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  // height: 86px;
   position: relative;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .example__term {
   .font-description-oswald;
   font-size: 24px;
   color: @black-two;
-  min-height: 56px;
-
+  height: 56px;
   border: 1px solid @very-light-pink-three;
   border-radius: 3px;
-  min-width: 124px;
-  flex-grow: 1;
+  width: 124px;
+  flex-grow: 0;
   padding-top: 12px;
 
   &:first-of-type {
@@ -66,27 +63,15 @@
   .font-description-arial;
   font-size: 12px;
   color: @greyish-brown;
-  // margin: 0;
   height: 30px;
   text-transform: lowercase;
-  // position: relative;
   position: absolute;
-
   background-color: @white-three;
   text-align: center;
-
-  // max-width: 70px;
   max-width: 25%;
-  // margin: 0 auto;
-  // margin-top: -10px;
   padding: 5px;
   margin: 0;
   margin-bottom: -15px;
-  // flex-grow: 1;
-
-  &:first-of-type {
-    // margin-right: 32px;
-  }
 
   &--weight {
     bottom: 0;
@@ -99,19 +84,21 @@
   }
 }
 
-.example__form {
-  background-image: url("../img/before-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: 50% 30%;
-  background-size: 115% auto;
-  // min-height: 232px;
-  // min-height: 80%;
-
+// в комментариях сверстано состояние второго кота
+.example__visual {
+  background-image: url("../img/before-mobile@1x.png")
+    /*,
+    url("../img/after-mobile@1x.png") */;
+  background-repeat: no-repeat /*, no-repeat*/;
+  background-position: 50% 30% /*, 50% 30%*/;
+  background-size: 115% auto /*, 115% auto*/;
   display: flex;
   flex-direction: column;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/before-mobile@2x.png");
+    background-image: url("../img/before-mobile@2x.png")
+      /*,
+      url("../img/after-mobile@2x.png")*/;
   }
 }
 
@@ -131,58 +118,53 @@
   position: relative;
 }
 
-// .example__description-controls {
-//   .font-description-oswald;
-//   font-size: 16px;
-//   line-height: 1.25;
-//   color: @black-two;
-// }
-
 .example__ctrl {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  &::before {
-    content: "было";
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: -5px;
-    margin-left: -55px;
+  display: flex;
+  justify-content: center;
+}
 
-    .font-description-oswald;
-    font-size: 16px;
-    line-height: 1.25;
-    color: @black-two;
-  }
+.example__button {
+  .font-description-oswald;
+  font-size: 16px;
+  line-height: 1.25;
+  color: @black-two;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  padding: 0;
+  margin-top: -5px;
+  margin-right: -5px;
+}
 
-  &::after {
-    content: "стало";
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: -5px;
-    margin-right: -60px;
+.example__invisible-checkbox {
+  /* скрываем чекбоксы правильно */
+  position: absolute;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  appearance: none;
 
-    .font-description-oswald;
-    font-size: 16px;
-    line-height: 1.25;
-    color: @black-two;
-  }
+  /* скрываем чекбоксы в IE 11 */
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 
 .example__checkbox {
   width: 84px;
   height: 14px;
-  appearance: none;
   background: @white-two;
   outline: none;
   border: 1px solid @very-light-pink-three;
   border-radius: 6px;
   transition: 0.5s;
   position: relative;
+  margin: 0 19px;
 
   &::before {
     content: "";
@@ -217,17 +199,13 @@
   color: @black-two;
   text-align: center;
   display: inline-block;
-  margin-top: 18px;
+  margin-top: 32px;
 }
 
 @media (min-width: @tablet-width) {
   .example {
     background-color: @white-two;
-    background-image: linear-gradient(
-      to bottom,
-      @white-two 57%,
-      @white-three 57%
-    );
+    background-image: linear-gradient (to bottom, @white-two 57%, @white-three 57%);
   }
 
   .example__wrapper {
@@ -257,7 +235,9 @@
   }
 
   .example__deflist {
+    margin: 0;
     margin-top: 30px;
+    width: 366px;
   }
 
   .example__term {
@@ -274,12 +254,10 @@
 
   .example__definition {
     max-width: 50%;
-
     font-size: 14px;
     line-height: 1;
     color: @greyish-brown;
     background-color: @white-two;
-    // margin-bottom: -3px;
 
     &--weight {
       left: 27px;
@@ -291,58 +269,44 @@
     }
   }
 
-  .example__form {
-    background-image: url("../img/before-tablet@1x.png");
+  //в комментариях разметка для второго состояния кота
+  .example__visual {
+    background-image: url("../img/before-tablet@1x.png"),
+      /* url("../img/after-tablet@1x.png") */;
 
-    background-position: 100% 48%;
-    background-size: 98% auto;
+    background-position: 100% 54% /*, 100% 50%*/;
+    background-size: 98% auto /*, 98% auto*/;
     margin-bottom: 43px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/before-tablet@2x.png");
+      background-image: url("../img/before-tablet@2x.png"),
+        /*url("../img/after-tablet@2x.png")*/;
     }
   }
 
   .example__controls {
-    margin-top: 87%;
-    // margin-bottom: 30px;
+    margin-top: 89.5%;
+    margin-bottom: 40px;
   }
 
   .example__ctrl {
-    &::before {
-      font-size: 20px;
-      border-bottom: 1px dotted @very-light-pink-three;
-      margin-left: -70px;
-      // margin-right: 20px;
-      padding-bottom: 5px;
-    }
+    padding-top: 8px;
+  }
 
-    &::after {
-      font-size: 20px;
-      border-bottom: 1px dotted @very-light-pink-three;
-      margin-right: -70px;
-      padding-bottom: 5px;
-    }
+  .example__button {
+    font-size: 20px;
+    border-bottom: 1px dotted @very-light-pink-three;
+    margin-top: -8px;
+    margin-right: 0;
+    padding-bottom: 5px;
 
     &:hover,
     &:focus {
-      &::before {
-        border-bottom: 1px solid @very-light-pink-three;
-      }
-
-      &::after {
-        border-bottom: 1px solid @very-light-pink-three;
-      }
+      border-bottom: 1px solid @very-light-pink-three;
     }
 
     &:active {
-      &::before {
-        border-bottom: none;
-      }
-
-      &::after {
-        border-bottom: none;
-      }
+      border-bottom: none;
     }
   }
 
@@ -351,6 +315,7 @@
     height: 6px;
     border-radius: 2.5px;
     background-color: #dcdcdc;
+    margin: 0 23px;
 
     cursor: pointer;
 
@@ -396,10 +361,11 @@
       }
 
       &::before {
-        //прикольный эффект если только со следующей строкой
+        // оставить для примера на будущее
+        // прикольный эффект, со следующей строкой
         // border: @leaf solid 2px;
 
-        box-shadow: 0px 4px 5px 0 rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
       }
     }
   }
@@ -411,9 +377,8 @@
   .example__secondary-description {
     max-width: 320px;
     font-size: 20px;
-    // line-height: 1;
     text-align: right;
-    margin-top: 15px;
+    margin-top: 27px;
 
     &:last-of-type {
       margin-top: 0;
@@ -424,20 +389,14 @@
 @media (min-width: @desktop-width) {
   .example {
     margin-bottom: 90px;
-
     background-color: @white-two;
-    background-image: linear-gradient(
-      to bottom,
-      @white-two 27.7%,
-      @white-three 27.7%
-    );
+    background-image: linear-gradient (to bottom, @white-two 27.7%, @white-three 27.7%);
   }
 
   .example__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-
     max-width: @content-width;
     padding: 0;
   }
@@ -449,11 +408,9 @@
   }
 
   .example__essence {
-    // min-width: 610px;
     min-width: auto;
     max-width: @content-width / 2;
     margin-right: 0;
-
     flex-direction: column;
     justify-content: flex-start;
 
@@ -462,12 +419,8 @@
 
   .example__description {
     margin-top: 124px;
-    // width: 300px;
-    // padding-right: 231px;
-    // min-height: 100px;
     min-width: auto;
     width: 441px;
-
     flex-grow: 0;
   }
 
@@ -483,15 +436,11 @@
 
   .example__definition {
     background-color: @white-three;
-
-    &--time {
-      right: 90px;
-    }
   }
 
   .example__secondary-description {
     text-align: left;
-    margin-top: 41px;
+    margin-top: 55px;
     margin-bottom: 75px;
 
     &:last-of-type {
@@ -501,38 +450,50 @@
     }
   }
 
-  .example__form {
-    min-width: 610px;
+  // в комментарияъ разметка для второго состояния кота
+  .example__visual {
+    width: 610px;
     margin-left: 0;
-
     position: relative;
+    top: 0;
+    left: 0;
     margin-top: -130px;
-
-    background-image: url("../img/before-desktop@1x.png");
-
-    background-position: 50% 0%;
-    background-size: 113% auto;
+    background-image: url("../img/before-desktop@1x.png")
+      /*,
+      url("../img/after-desktop@1x.png")*/;
+    background-position: 50% 0% /*, 50% 0%*/;
+    background-size: 113% auto /*, 113% auto*/;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/before-desktop@2x.png");
+      background-image: url("../img/before-desktop@2x.png")
+        /*,
+        url("../img/after-desktop@2x.png")*/;
     }
   }
 
   .example__controls {
     position: relative;
+    top: 0;
+    left: 0;
     margin-left: 53.1%;
     margin-top: 93%;
   }
 
   .example__ctrl {
-    &::before {
+    top: 0;
+    left: 0;
+    width: 500px;
+  }
+
+  .example__button {
+    padding-bottom: 4px;
+
+    &--before {
       margin-left: -72px;
-      padding-bottom: 4px;
     }
 
-    &::after {
+    &--after {
       margin-right: -72px;
-      padding-bottom: 4px;
     }
   }
 }
