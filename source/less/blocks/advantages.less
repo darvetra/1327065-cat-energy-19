@@ -31,10 +31,11 @@
   font-size: 14px;
   line-height: 1.29;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   padding-left: 80px;
   padding-top: 2px;
   position: relative;
+  min-height: 60px;
 
   &::before {
     content: "";
@@ -102,7 +103,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    // margin-top: 58px;
     margin-top: 0;
     margin-bottom: 27px;
   }
@@ -112,43 +112,25 @@
     line-height: 1.5;
     margin: 0;
     margin-top: 58px;
-    // margin-bottom: 85px;
     margin-bottom: 26px;
     max-width: 324px;
     min-height: 233px;
     flex-grow: 1;
-
     padding-left: 0;
     padding-right: 79px;
     padding-top: 112px;
-
-    // z-index: 10;
 
     &:nth-of-type(even) {
       margin-left: 60px;
     }
 
     &::before {
-      // content: "";
-      // position: absolute;
-      // top: 0;
-      // left: 0;
-      // display: block;
       width: 80px;
       height: 80px;
-      // background-color: @leaf;
-      // background-repeat: no-repeat;
-      // background-position: center;
     }
 
     &--eco::before {
-      // background-image: url("../img/advantage-leaf@1x.png");
       background-size: 62%;
-
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        // background-image: url("../img/advantage-leaf@2x.png");
-        // background-size: 83%;
-      }
     }
 
     &--eco::after {
@@ -166,13 +148,7 @@
     }
 
     &--chemical::before {
-      // background-image: url("../img/advantage-powder@1x.png");
       background-size: 62%;
-
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        // background-image: url("../img/advantage-powder@2x.png");
-        // background-size: 83%;
-      }
     }
 
     &--chemical::after {
@@ -190,13 +166,7 @@
     }
 
     &--dinner::before {
-      // background-image: url("../img/advantage-dining@1x.png");
       background-size: 62%;
-
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        // background-image: url("../img/advantage-dining@2x.png");
-        // background-size: 83%;
-      }
     }
 
     &--dinner::after {
@@ -214,13 +184,7 @@
     }
 
     &--time::before {
-      // background-image: url("../img/advantage-clock@1x.png");
       background-size: 62%;
-
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        // background-image: url("../img/advantage-clock@2x.png");
-        // background-size: 83%;
-      }
     }
 
     &--time::after {

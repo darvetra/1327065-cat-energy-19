@@ -7,7 +7,6 @@
   flex-wrap: wrap;
   margin: 0 auto;
   width: 100%;
-  // padding: 0 @mobile-indent;
 }
 
 .form__form {
@@ -30,7 +29,6 @@
 // параметры кота
 .form__list-cat-propeties {
   list-style-type: none;
-  // padding: 0;
   margin-top: 36px;
   padding: 0 @mobile-indent;
   margin-bottom: 10px;
@@ -42,11 +40,8 @@
   font-size: 16px;
   line-height: 1.13;
   text-align: left;
-
   display: flex;
   justify-content: space-between;
-  // align-items: center;
-
   position: relative; // для позиционирования иконок
 }
 
@@ -60,15 +55,11 @@
   text-align: left;
   line-height: 1.13;
   color: @greyish-brown;
-
-  // width: 100%;
   flex-grow: 1;
   margin-left: 13px;
   margin-bottom: 14px;
   padding-left: 14px;
-
   height: 45px;
-
   border: 1px solid @pinkish-grey-three;
 
   &:hover {
@@ -96,7 +87,6 @@
 }
 
 // радио список
-
 .form__list-target {
   list-style-type: none;
   border-top: 1px solid @very-light-pink-three;
@@ -107,31 +97,16 @@
 }
 
 //заголовок
-// .form__subtitle {
-//   margin-top: 31px;
-
-//   &--comment {
-//     margin-top: 14px;
-//   }
-
-//   &--add {
-//     margin-top: 27px;
-//   }
-// }
-
 .form__subtitle {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-
   position: relative;
   margin: 0;
   margin-top: 31px;
   margin-left: @mobile-indent;
   margin-right: @mobile-indent;
   padding-bottom: 34px;
-  // border-bottom: solid 1px @very-light-pink-three;
-
   .font-title;
   font-size: 24px;
   line-height: 1;
@@ -141,12 +116,10 @@
   &--line {
     &::after {
       content: "";
-      // position: relative;
       position: absolute;
       top: 14px;
       right: 0;
       margin-right: -83px;
-      // min-width: 99px;
       height: 3px;
       background-color: @leaf;
       min-width: 162px;
@@ -201,7 +174,6 @@
 }
 
 //комментарий
-
 .form__textarea {
   .font-description-oswald;
   font-size: 16px;
@@ -210,13 +182,11 @@
   color: @greyish-brown;
   margin: 0 @mobile-indent;
   margin-top: 0;
-
   padding: 12px 13px;
   height: 150px;
 }
 
 //раздел дополнительно
-
 .form__optionally {
   list-style-type: none;
   padding: 0 @mobile-indent;
@@ -238,13 +208,10 @@
 .form__footnote {
   margin: 23px auto;
   margin-bottom: 32px;
+  .font-description-arial;
 }
 
 @media (min-width: @tablet-width) {
-  .form__wrapper {
-    // padding: 0 @tablet-indent;
-  }
-
   .form__description {
     font-size: 20px;
     line-height: 1.5;
@@ -278,28 +245,6 @@
   }
 
   //заголовки
-  // .form__subtitle {
-  //   // margin: 0 @tablet-indent-form;
-  //   margin-top: 0;
-  //   margin-right: 30px;
-
-  //   &--line {
-  //     &::after {
-  //       // content: "";
-  //       // position: relative;
-
-  //       // top: 22px;
-  //       // right: -@tablet-indent-form;
-  //       // right: -@tablet-indent;
-  //       // min-width: 99px;
-  //       // height: 3px;
-  //       // background-color: @leaf;
-
-  //       // flex-grow: 1;
-  //     }
-  //   }
-  // }
-
   .form__subtitle {
     margin-left: 69px;
     border: none;
@@ -347,6 +292,12 @@
     padding: 0 @tablet-indent-form;
   }
 
+  .form__input-icon {
+    &--phone {
+      top: 16px;
+    }
+  }
+
   .form__textarea {
     margin: 0 @tablet-indent-form;
     margin-top: 42px;
@@ -364,7 +315,6 @@
 
   //контролы
   .form__controls {
-    // padding: 0 @tablet-indent-form;
     flex-direction: row;
     margin-top: 15px;
     margin-bottom: 72px;
@@ -398,7 +348,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-
     margin-bottom: 106px;
   }
 
@@ -417,15 +366,11 @@
   .form__list-target {
     width: @content-width / 2 - 40px;
     margin: 0;
-    height: 197px;
+    height: auto;
     margin-top: 66px;
     margin-left: 40px;
     margin-bottom: 68px;
   }
-
-  // .form__subtitle {
-  //   width: @content-width;
-  // }
 
   .form__subtitle {
     width: 520px;
@@ -435,13 +380,8 @@
 
     &--line {
       &::before {
-        // content: "";
-        // position: relative;
-        // top: 22px;
         left: -442px;
         min-width: 500px;
-        // height: 3px;
-        // background-color: @leaf;
         flex-grow: 1;
       }
 
@@ -449,8 +389,7 @@
         flex-grow: 1;
         right: 0;
         margin-right: -1532px;
-        // min-width: 2000px;
-        min-width: 1500px; //
+        min-width: 1500px;
       }
     }
 
@@ -472,15 +411,27 @@
     justify-content: space-between;
     padding: 0;
     margin-bottom: 48px;
+    flex-wrap: wrap;
   }
 
   .form__contact-list-item {
-    // width: @content-width / 2;
     width: 570px;
 
     &:last-of-type {
       padding-left: 80px;
       width: 650px;
+    }
+  }
+
+  .form__input-icon {
+    &--mail {
+      top: 16px;
+      right: 20px;
+    }
+
+    &--phone {
+      top: 18px;
+      right: 18px;
     }
   }
 
@@ -497,12 +448,6 @@
   }
 
   .form__button {
-    // margin: 0 @tablet-indent-form;
-    // margin-right: 60px;
-    // font-size: 20px;
-
-    // min-width: 283px;
-    // height: 52px;
     width: 568px;
     height: 54px;
     margin: 0;
@@ -511,10 +456,6 @@
   }
 
   .form__footnote {
-    // text-align: left;
-    // margin: 0;
-    // font-size: 16px;
-    // padding-top: 17px;
     margin-left: 82px;
     margin-top: 8px;
   }
