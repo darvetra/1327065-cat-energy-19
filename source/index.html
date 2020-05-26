@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Для svgforeverbody-->
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
     <link rel="stylesheet" href="css/style.min.css" />
-    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font" />
 
     <title>HTML Academy: Кэт энерджи</title>
 
@@ -20,8 +20,9 @@
     <script src="js/picturefill.js" async></script>
 
     <script src="js/svg4everybody.js"></script>
-    <script>svg4everybody(); // run it now or whenever you are ready</script>
-
+    <script>
+      svg4everybody(); // run it now or whenever you are ready
+    </script>
   </head>
   <body>
     <!-- Пример инклюда, оставить -->
@@ -35,7 +36,13 @@
           <picture>
             <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg" />
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
-            <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Кэт энерджи – Функциональное питание для котов" />
+            <img
+              class="header__logo-image"
+              src="img/logo-mobile.svg"
+              width="191"
+              height="39"
+              alt="Кэт энерджи – Функциональное питание для котов"
+            />
           </picture>
         </a>
         <nav class="main-nav main-nav--nojs main-nav--opened">
@@ -43,7 +50,9 @@
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active site-list__item--index">
+            <li
+              class="site-list__item site-list__item--active site-list__item--index"
+            >
               <a>Главная</a>
             </li>
             <li class="site-list__item site-list__item--index">
@@ -54,7 +63,9 @@
               >
             </li>
             <li class="site-list__item site-list__item--index">
-              <a href="form.html" class="site-list__link site-list__link--index">Подбор программы</a>
+              <a href="form.html" class="site-list__link site-list__link--index"
+                >Подбор программы</a
+              >
             </li>
           </ul>
         </nav>
@@ -70,7 +81,9 @@
         <div class="benefit__wrapper">
           <h2 class="benefit__title">Функциональное питание для котов</h2>
           <p class="benefit__subtitle">Занялся собой? Займись котом!</p>
-          <a href="form.html" class="button benefit__link">Подобрать программу</a>
+          <a href="form.html" class="button benefit__link"
+            >Подобрать программу</a
+          >
         </div>
       </section>
 
@@ -85,7 +98,9 @@
                 по деревьям? Пора на диету! Cat Energy Slim поможет вашему
                 питомцу сбросить лишний вес.
               </p>
-              <a href="catalog.html#slim" class="features__link">Каталог slim</a>
+              <a href="catalog.html#slim" class="features__link"
+                >Каталог slim</a
+              >
             </li>
             <li class="features__item features__item--pro">
               <h3 class="features__title">Набор массы</h3>
@@ -155,10 +170,20 @@
             <div class="example__instance example__instance--slim"></div>
             <div class="example__controls">
               <div class="example__ctrl">
-                <button class="example__button example__button--before" type="button">Было</button>
+                <button
+                  class="example__button example__button--before"
+                  type="button"
+                >
+                  Было
+                </button>
                 <input class="example__invisible-checkbox" type="checkbox" />
                 <span class="example__checkbox"></span>
-                <button class="example__button example__button--after" type="button">Стало</button>
+                <button
+                  class="example__button example__button--after"
+                  type="button"
+                >
+                  Стало
+                </button>
               </div>
             </div>
           </div>
@@ -186,7 +211,14 @@
     <section class="map">
       <div class="map__wrapper">
         <div class="map__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533207!2d30.320858716352063!3d59.938716481876256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1590438923361!5m2!1sru!2sru" class="map__iframe" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533207!2d30.320858716352063!3d59.938716481876256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1590438923361!5m2!1sru!2sru"
+            class="map__iframe"
+            style="border: 0;"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
         </div>
       </div>
     </section>
@@ -194,29 +226,58 @@
     <footer class="footer">
       <div class="footer__wrapper">
         <a class="footer__logo">
-          <svg class="footer__logo-image" width="128" height="24" aria-label="Кэт энерджи – Функциональное питание для котов">
+          <svg
+            class="footer__logo-image"
+            width="128"
+            height="24"
+            aria-label="Кэт энерджи – Функциональное питание для котов"
+          >
             <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
           </svg>
         </a>
         <div class="footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-                <svg class="social__icon social__icon--vk" width="22" height="12" aria-label="Мы в Вконтакте">
+              <a
+                class="social__link social__link--vkontakte"
+                href="https://vk.com/htmlacademy"
+              >
+                <svg
+                  class="social__icon social__icon--vk"
+                  width="22"
+                  height="12"
+                  aria-label="Мы в Вконтакте"
+                >
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-                <svg class="social__icon social__icon--ig" width="17" height="17" aria-label="Мы в Инстаграме">
+              <a
+                class="social__link social__link--instagram"
+                href="https://www.instagram.com/htmlacademy"
+              >
+                <svg
+                  class="social__icon social__icon--ig"
+                  width="17"
+                  height="17"
+                  aria-label="Мы в Инстаграме"
+                >
                   <use xlink:href="img/sprite.svg#icon-insta"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-                <svg class="social__icon social__icon--fb" width="10" height="19" aria-label="Мы в Фейсбуке">
+              <a
+                class="social__link social__link--facebook"
+                href="https://www.facebook.com/htmlacademy"
+              >
+                <svg
+                  class="social__icon social__icon--fb"
+                  width="10"
+                  height="19"
+                  aria-label="Мы в Фейсбуке"
+                >
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
                 </svg>
               </a>
@@ -225,8 +286,16 @@
         </div>
         <div class="footer__copyright copyright">
           <b class="copyright__text">HTML Academy</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="copyright__icon" width="40" height="40" aria-label="HTML Academy">
+          <a
+            class="copyright__link"
+            href="https://htmlacademy.ru/intensive/adaptive"
+          >
+            <svg
+              class="copyright__icon"
+              width="40"
+              height="40"
+              aria-label="HTML Academy"
+            >
               <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
             </svg>
           </a>
