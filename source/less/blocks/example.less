@@ -9,10 +9,10 @@
   flex-direction: column;
   margin: 0 auto;
   width: 100%;
-  padding: 0 @mobile-indent;
 }
 
 .example__essence {
+  padding: 0 @mobile-indent;
   padding-top: 8px;
 }
 
@@ -22,6 +22,7 @@
   line-height: 1.67;
   text-align: left;
   margin: 16px 0;
+  padding: 0 @mobile-indent;
 }
 
 .example__description {
@@ -84,21 +85,36 @@
   }
 }
 
-// в комментариях сверстано состояние второго кота
 .example__visual {
-  background-image: url("../img/before-mobile@1x.png")
-    /*,
-    url("../img/after-mobile@1x.png") */;
-  background-repeat: no-repeat /*, no-repeat*/;
-  background-position: 50% 30% /*, 50% 30%*/;
-  background-size: 115% auto /*, 115% auto*/;
   display: flex;
   flex-direction: column;
 
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/before-mobile@2x.png")
-      /*,
-      url("../img/after-mobile@2x.png")*/;
+  height: 114%;
+}
+
+.example__instance {
+  background-repeat: no-repeat;
+  background-position: 50% 45%;
+  display: flex;
+  min-height: 318px;
+  background-size: contain;
+
+  &--fat {
+    background-image: url("../img/before-mobile@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/before-mobile@2x.png");
+    }
+  }
+
+  &--slim {
+    display: none;
+
+    background-image: url("../img/after-mobile@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/after-mobile@2x.png");
+    }
   }
 }
 
@@ -108,13 +124,10 @@
 
 .example__controls {
   margin: 0 auto;
-  margin-top: 113.5%;
   margin-bottom: 44px;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
-
   position: relative;
 }
 
@@ -123,7 +136,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   display: flex;
   justify-content: center;
 }
@@ -205,23 +217,21 @@
 @media (min-width: @tablet-width) {
   .example {
     background-color: @white-two;
-    background-image: linear-gradient (to bottom, @white-two 57%, @white-three 57%);
-  }
-
-  .example__wrapper {
-    padding: 0 @tablet-indent;
   }
 
   .example__essence {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 0 @tablet-indent;
+    padding-top: 8px;
   }
 
   .example__title {
     font-size: 60px;
     line-height: 1;
     margin-top: 42px;
+    padding: 0 @tablet-indent;
   }
 
   .example__description {
@@ -238,6 +248,7 @@
     margin: 0;
     margin-top: 30px;
     width: 366px;
+    z-index: 20;
   }
 
   .example__term {
@@ -269,24 +280,40 @@
     }
   }
 
-  //в комментариях разметка для второго состояния кота
+
   .example__visual {
-    background-image: url("../img/before-tablet@1x.png"),
-      /* url("../img/after-tablet@1x.png") */;
+    position: relative;
+  }
 
-    background-position: 100% 54% /*, 100% 50%*/;
-    background-size: 98% auto /*, 98% auto*/;
-    margin-bottom: 43px;
+  .example__instance {
+    background-position: 60% 43%;
+    min-height: 716px;
+    background-size: 90% auto, auto;
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/before-tablet@2x.png"),
-        /*url("../img/after-tablet@2x.png")*/;
+    &--fat {
+      background-image: url("../img/before-tablet@1x.png"), linear-gradient(to bottom, @white-two 35.6%, @white-three 35.6%);
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/before-tablet@2x.png"), linear-gradient(to bottom, @white-two 35.6%, @white-three 35.6%);
+      }
+    }
+
+    &--slim {
+      display: none;
+      background-image: url("../img/after-tablet@1x.png"), linear-gradient(to bottom, @white-two 35.6%, @white-three-v2 35.6%);
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/after-tablet@2x.png"), linear-gradient(to bottom, @white-two 35.6%, @white-three-v2 35.6%);
+      }
     }
   }
 
   .example__controls {
-    margin-top: 89.5%;
-    margin-bottom: 40px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 80px;
+    margin-top: -82px;
+    height: 1px;
   }
 
   .example__ctrl {
@@ -316,7 +343,6 @@
     border-radius: 2.5px;
     background-color: #dcdcdc;
     margin: 0 23px;
-
     cursor: pointer;
 
     &::before {
@@ -390,7 +416,7 @@
   .example {
     margin-bottom: 90px;
     background-color: @white-two;
-    background-image: linear-gradient (to bottom, @white-two 27.7%, @white-three 27.7%);
+    background-image: linear-gradient(to bottom, @white-two 28%, @white-three 28%);
   }
 
   .example__wrapper {
@@ -405,6 +431,7 @@
     background-color: @white-two;
     flex-grow: 1;
     width: 100%;
+    padding-left: 0;
   }
 
   .example__essence {
@@ -413,7 +440,7 @@
     margin-right: 0;
     flex-direction: column;
     justify-content: flex-start;
-
+    padding-left: 0;
     position: relative;
   }
 
@@ -441,33 +468,46 @@
   .example__secondary-description {
     text-align: left;
     margin-top: 55px;
-    margin-bottom: 75px;
+    margin-bottom: 59px;
 
     &:last-of-type {
       position: absolute;
-      bottom: 0;
-      right: 115px;
+      bottom: 61px;
+      right: 145px;
+      margin-bottom: 10px;
     }
   }
 
-  // в комментарияъ разметка для второго состояния кота
   .example__visual {
     width: 610px;
     margin-left: 0;
     position: relative;
     top: 0;
     left: 0;
-    margin-top: -130px;
-    background-image: url("../img/before-desktop@1x.png")
-      /*,
-      url("../img/after-desktop@1x.png")*/;
-    background-position: 50% 0% /*, 50% 0%*/;
-    background-size: 113% auto /*, 113% auto*/;
+    margin-top: -210px;
+    height: 734px;
+  }
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/before-desktop@2x.png")
-        /*,
-        url("../img/after-desktop@2x.png")*/;
+  .example__instance {
+    background-position: 45% 39%;
+    min-height: 716px;
+    background-size: 115% auto, auto;
+
+    &--fat {
+      background-image: url("../img/before-desktop@1x.png"), linear-gradient(to bottom, @white-two 38%, @white-three 38%);
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/before-desktop@2x.png"), linear-gradient(to bottom, @white-two 38%, @white-three 38%);
+      }
+    }
+
+    &--slim {
+      display: none;
+      background-image: url("../img/after-desktop@1x.png"), linear-gradient(to bottom, @white-two 38%, @white-three-v2 38%);
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/after-desktop@2x.png"), linear-gradient(to bottom, @white-two 38%, @white-three-v2 38%);
+      }
     }
   }
 
@@ -476,7 +516,7 @@
     top: 0;
     left: 0;
     margin-left: 53.1%;
-    margin-top: 93%;
+    margin-top: -64px;
   }
 
   .example__ctrl {
