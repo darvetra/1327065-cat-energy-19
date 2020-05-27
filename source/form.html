@@ -67,7 +67,7 @@
           <h1 class="page__title">Подбор программы</h1>
           <form
             action="https://echo.htmlacademy.ru/courses"
-            method="GET"
+            method="POST"
             class="form__form"
           >
             <p class="form__description">
@@ -83,14 +83,13 @@
                     type="text"
                     placeholder="Барсик"
                     class="form__input-text"
-                    required
                   />
                 </label>
               </li>
               <li>
                 <label class="form__label">
                   <span class="form__notion">Вес (кг):* </span>
-                  <input type="text" placeholder="7" class="form__input-text" required />
+                  <input type="text" placeholder="7" class="form__input-text" />
                 </label>
               </li>
               <li>
@@ -152,9 +151,9 @@
                   <span class="form__notion">E-mail:* </span>
                   <input
                     type="email"
+                    name="email"
                     placeholder="kuklachev@gmail.com"
-                    class="form__input-text"
-                    value="kuklachev@gmail.com"
+                    class="form__input-text form__email form__validity"
                     required
                   />
                   <span class="form__input-icon form__input-icon--mail">
@@ -169,9 +168,9 @@
                   <span class="form__notion">Телефон:* </span>
                   <input
                     type="tel"
+                    name="phone"
                     placeholder="8 (960) 900-60-90"
-                    class="form__input-text"
-                    value="8 (960) 900-60-90"
+                    class="form__input-text form__phone form__validity"
                     required
                   />
                   <span class="form__input-icon form__input-icon--phone">

@@ -72,9 +72,13 @@
     outline: none;
   }
 
-  &:invalid {
-    border: 2px solid @peachy-pink;
-  }
+  // &:invalid {
+  //   border: 2px solid @peachy-pink;
+  // }
+}
+
+.form__validity--invalid {
+  border: 2px solid @peachy-pink;
 }
 
 .form__input-text:focus + .form__input-icon svg,
@@ -82,7 +86,11 @@
   fill: @leaf;
 }
 
-.form__input-text:invalid + .form__input-icon svg {
+// .form__input-text:invalid + .form__input-icon svg {
+//   fill: @peachy-pink;
+// }
+
+.form__validity--invalid + .form__input-icon svg {
   fill: @peachy-pink;
 }
 
