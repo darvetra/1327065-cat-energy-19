@@ -62,6 +62,10 @@
   height: 45px;
   border: 1px solid @pinkish-grey-three;
 
+  &:focus:invalid {
+    border: 2px solid @peachy-pink;
+  }
+
   &:hover {
     border: 1px solid @very-light-pink-three;
   }
@@ -71,14 +75,6 @@
     border: 2px solid @greyish-brown;
     outline: none;
   }
-
-  // &:invalid {
-  //   border: 2px solid @peachy-pink;
-  // }
-}
-
-.form__validity--invalid {
-  border: 2px solid @peachy-pink;
 }
 
 .form__input-text:focus + .form__input-icon svg,
@@ -86,11 +82,7 @@
   fill: @leaf;
 }
 
-// .form__input-text:invalid + .form__input-icon svg {
-//   fill: @peachy-pink;
-// }
-
-.form__validity--invalid + .form__input-icon svg {
+.form__input-text:focus:invalid + .form__input-icon svg {
   fill: @peachy-pink;
 }
 
