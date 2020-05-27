@@ -92,7 +92,7 @@
   .benefit {
     background-color: @white-two;
     margin-top: -128px;
-    padding-top: 84px;
+    height: 696px;
     z-index: 5;
     position: relative;
     width: 100%;
@@ -103,7 +103,8 @@
 
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: 63% 143px, 100% 100%, top;
-    background-size: 550px auto, 50% auto, 100%;
+    background-size: 550px auto, contain, 100%;
+    background-clip: padding-box;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-can-desktop@2x.png"),
@@ -118,7 +119,7 @@
 
   .benefit__title {
     text-align: left;
-    margin-top: 139px;
+    margin-top: 139px + 84px;
     margin-left: 80px;
   }
 
@@ -136,5 +137,11 @@
     margin-left: 80px;
     margin-top: 22px;
     margin-bottom: 15.4%;
+  }
+}
+
+@media (min-width: @desktop-width + 140px) {
+  .benefit {
+    background-size: 550px auto, 50% auto, 100%;
   }
 }

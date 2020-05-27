@@ -280,7 +280,6 @@
     }
   }
 
-
   .example__visual {
     position: relative;
   }
@@ -288,22 +287,26 @@
   .example__instance {
     background-position: 60% 43%;
     min-height: 716px;
-    background-size: 90% auto, auto;
+    background-size: 690px auto, auto;
 
     &--fat {
-      background-image: url("../img/before-tablet@1x.png"), linear-gradient(to bottom, @white-two 35.6%, @white-three 35.6%);
+      background-image: url("../img/before-tablet@1x.png"),
+        linear-gradient(to bottom, @white-two 35.6%, @white-three 35.6%);
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/before-tablet@2x.png"), linear-gradient(to bottom, @white-two 35.6%, @white-three 35.6%);
+        background-image: url("../img/before-tablet@2x.png"),
+          linear-gradient(to bottom, @white-two 35.6%, @white-three 35.6%);
       }
     }
 
     &--slim {
       display: none;
-      background-image: url("../img/after-tablet@1x.png"), linear-gradient(to bottom, @white-two 35.6%, @white-three-v2 35.6%);
+      background-image: url("../img/after-tablet@1x.png"),
+        linear-gradient(to bottom, @white-two 35.6%, @white-three-v2 35.6%);
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/after-tablet@2x.png"), linear-gradient(to bottom, @white-two 35.6%, @white-three-v2 35.6%);
+        background-image: url("../img/after-tablet@2x.png"),
+          linear-gradient(to bottom, @white-two 35.6%, @white-three-v2 35.6%);
       }
     }
   }
@@ -416,7 +419,7 @@
   .example {
     margin-bottom: 90px;
     background-color: @white-two;
-    background-image: linear-gradient(to bottom, @white-two 28%, @white-three 28%);
+    background-image: linear-gradient(to bottom, @white-two 180px, @white-three 180px);
   }
 
   .example__wrapper {
@@ -494,19 +497,23 @@
     background-size: 115% auto, auto;
 
     &--fat {
-      background-image: url("../img/before-desktop@1x.png"), linear-gradient(to bottom, @white-two 38%, @white-three 38%);
+      background-image: url("../img/before-desktop@1x.png"),
+        linear-gradient(to bottom, @white-two 38%, @white-three 38%);
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/before-desktop@2x.png"), linear-gradient(to bottom, @white-two 38%, @white-three 38%);
+        background-image: url("../img/before-desktop@2x.png"),
+          linear-gradient(to bottom, @white-two 38%, @white-three 38%);
       }
     }
 
     &--slim {
       display: none;
-      background-image: url("../img/after-desktop@1x.png"), linear-gradient(to bottom, @white-two 38%, @white-three-v2 38%);
+      background-image: url("../img/after-desktop@1x.png"),
+        linear-gradient(to bottom, @white-two 38%, @white-three-v2 38%);
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/after-desktop@2x.png"), linear-gradient(to bottom, @white-two 38%, @white-three-v2 38%);
+        background-image: url("../img/after-desktop@2x.png"),
+          linear-gradient(to bottom, @white-two 38%, @white-three-v2 38%);
       }
     }
   }
